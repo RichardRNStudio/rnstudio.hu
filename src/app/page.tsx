@@ -1,19 +1,5 @@
-import Container from '@/components/Container/Container';
-import Footer from '@/components/Footer/Footer';
-import Header from '@/components/Header/Header';
+import Home from '@/app/home/page';
 
-const Home = () => {
-  return (
-    <>
-      <Header />
-      <main className="min-h-screen">
-        <Container>
-          <h1 className="text-3xl">Hello World</h1>
-        </Container>
-      </main>
-      <Footer />
-    </>
-  );
-};
+const App = () => <Home />;
 
-export default Home;
+export default App;

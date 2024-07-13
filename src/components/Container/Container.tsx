@@ -7,7 +7,14 @@ type ContainerProps = {
 };
 
 const Container = ({ children, className }: ContainerProps) => (
-  <div className={classNames(className, 'w-7/12 mx-auto')}>{children}</div>
+  <div
+    className={classNames(
+      className,
+      'mx-5 sm:mx-10 md:w-9/12 md:mx-auto xl:w-1/2'
+    )}
+  >
+    {children}
+  </div>
 );
 
 export default Container;

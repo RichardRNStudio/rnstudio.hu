@@ -1,34 +1,17 @@
-import Link from 'next/link';
 import Container from '../Container/Container';
-
-const links = [
-  { index: 1, href: '/', label: 'About' },
-  { index: 2, href: '/projects', label: 'Projects' },
-  { index: 2, href: '/uses', label: 'Uses' },
-];
+import { DesktopNavigation } from './DesktopNavigation/DesktopNavigation';
+import MobileNavigation from './MobileNavigation/MobileNavigation';
 
 const Header = () => {
   return (
-    <header>
-      <div className="min-h-16" />
-      <div className="min-h-16 flex items-center border-opacity-30 border-neutral-500 border-b shadow-sm max-w-full fixed top-0 left-0 right-0 backdrop-blur-md">
-        <Container>
-          <div className="flex justify-between">
-            <div>RNStudio</div>
-            <div className="flex justify-between w-64">
-              {links.map(({ href, label, index }) => (
-                <Link
-                  key={index}
-                  href={href}
-                  className="hover:text-gray-400 tracking-wider"
-                >
-                  {label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </div>
+    <header className="min-h-16 flex items-center sticky top-0 left-0 right-0 backdrop-blur-md border-opacity-30 border-neutral-500 border-b shadow-sm">
+      <Container className="w-full">
+        <nav className="flex justify-between">
+          <div className="flex items-center">RNStudio</div>
+          <DesktopNavigation />
+          <MobileNavigation />
+        </nav>
+      </Container>
     </header>
   );
 };

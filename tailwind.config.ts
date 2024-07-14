@@ -22,10 +22,15 @@ const config: Config = {
           '0%': { transform: 'translateX(32px)' },
           '100%': { transform: 'translateX(0)' },
         },
+        'fade-in-opacity': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         'switch-dark': 'switch-dark-move 0.5s ease-in-out',
         'switch-light': 'switch-light-move 0.5s ease-in-out',
+        'fade-in': 'fade-in-opacity 0.5s ease-in',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

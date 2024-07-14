@@ -5,7 +5,7 @@ import ThemeSelector from './ThemeSelector/ThemeSelector';
 
 const Header = () => {
   return (
-    <header className="min-h-16 flex items-center sticky top-0 left-0 right-0 backdrop-blur-md border-opacity-30 border-neutral-500 border-b shadow-sm">
+    <header className="min-h-16 flex items-center sticky top-0 left-0 right-0 backdrop-blur-xl border-opacity-30 border-neutral-500 border-b shadow-sm">
       <Container className="w-full">
         <nav className="flex justify-between">
           <div className="flex items-center text-black dark:text-white">

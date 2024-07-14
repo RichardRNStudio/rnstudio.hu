@@ -8,6 +8,7 @@
   ],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true, "semi": true }]
+    "prettier/prettier": ["error", { "singleQuote": true, "semi": true }],
+    "react-hooks/exhaustive-deps": "off"
   }
 }

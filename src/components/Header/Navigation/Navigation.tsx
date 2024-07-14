@@ -15,7 +15,7 @@ export const Navigation = () => {
       className={classNames(
         pathname === href
           ? 'text-black dark:text-white'
-          : 'text-zinc-400 dark:text-zinc-400',
+          : 'text-gray-500 dark:text-zinc-400',
         'hover:text-black dark:hover:text-white hover:transition hover:ease-in-out uppercase font-black text-lg sm:text-sm'
       )}
     >

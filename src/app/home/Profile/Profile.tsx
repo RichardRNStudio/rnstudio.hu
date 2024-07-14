@@ -8,10 +8,10 @@ const Profile = () => (
       <div className="flex flex-col justify-center">
         <div className="flex flex-row items-center justify-between max-w-72">
           <Time />
-          <div className="mr-1">•</div>
           <div className="text-sm text-stone-600 dark:text-stone-200 text-opacity-70 md:text-md">
-            Szeged, Hungary 🇭🇺
+            Szeged, Hungary
           </div>
+          <div>🇭🇺</div>
         </div>
         <h1 className="text-2xl font-black mt-2 md:text-3xl">
           {`Hi, I'm Richárd Nagy`}

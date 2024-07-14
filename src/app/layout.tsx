@@ -4,6 +4,8 @@ import { Quicksand } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import { ThemeProvider } from 'next-themes';
+import classNames from 'classnames';
 
 const inter = Quicksand({ subsets: ['latin'] });
 
@@ -18,11 +20,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <main className="py-6">{children}</main>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={classNames(
+          inter.className,
+          'bg-none bg-white dark:bg-black'
+        )}
+      >
+        <ThemeProvider attribute="class">
+          <Header />
+          <main className="py-6">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

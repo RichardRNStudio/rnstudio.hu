@@ -1,9 +1,12 @@
 import { CompanyLogoProps } from '../CompanyLogo/CompanyLogo.types';
 
-export interface WorkItemProps extends Partial<CompanyLogoProps> {
-  companyName: string;
+export type Job = {
+  company: {
+    name: string;
+    link: string;
+    logo?: CompanyLogoProps;
+  };
   position: string;
-  link: string;
-  startDate: string;
-  endDate: string;
-}
+  startDate: Date;
+  endDate: Date;
+};

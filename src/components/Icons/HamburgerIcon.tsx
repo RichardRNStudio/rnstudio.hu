@@ -1,4 +1,4 @@
-import { IIcon } from '../IIcon.interface';
+import { IIcon } from './IIcon.interface';
 
 export const HamburgerIcon = ({ width, height, color }: IIcon) => (
   <svg
@@ -11,20 +11,20 @@ export const HamburgerIcon = ({ width, height, color }: IIcon) => (
     <path
       d="M4 7L7 7M20 7L11 7"
       stroke={color}
-      stroke-width="1.5"
-      stroke-linecap="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
     />
     <path
       d="M20 17H17M4 17L13 17"
       stroke={color}
-      stroke-width="1.5"
-      stroke-linecap="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
     />
     <path
       d="M4 12H7L20 12"
       stroke={color}
-      stroke-width="1.5"
-      stroke-linecap="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
     />
   </svg>
 );

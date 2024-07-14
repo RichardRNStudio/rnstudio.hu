@@ -1,13 +1,25 @@
-import { LINKS } from '@/shared/config';
-import Link from 'next/link';
+'use client';
 
-export const Navigation = () =>
-  LINKS.map(({ href, label, index }) => (
+import { LINKS } from '@/shared/config';
+import classNames from 'classnames';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+export const Navigation = () => {
+  const pathname = usePathname();
+
+  return LINKS.map(({ href, label, index }) => (
     <Link
       key={index}
       href={href}
-      className="hover:text-gray-400 hover:transition hover:ease-in-out font-black uppercase text-lg text-white sm:text-sm"
+      className={classNames(
+        pathname === href
+          ? 'text-black dark:text-white'
+          : 'text-zinc-400 dark:text-zinc-400',
+        'hover:text-black dark:hover:text-white hover:transition hover:ease-in-out uppercase font-black text-lg sm:text-sm'
+      )}
     >
       {label}
     </Link>
   ));
+};

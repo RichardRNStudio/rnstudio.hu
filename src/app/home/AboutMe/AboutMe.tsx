@@ -3,7 +3,7 @@ import { Section } from '../../../components/Section/Section';
 const AboutMe = () => {
   return (
     <Section title="Introduction">
-      <div className="flex flex-col">
+      <div className="flex flex-col text-black dark:text-white">
         <p className="leading-7">
           {`I'm a Javascript Engineer living in Hungary. I have a passion for coding and love diving into technologies like
         JavaScript, TypeScript, React, Next.js, and React Native. Continuously

@@ -13,7 +13,7 @@ const Time = () => {
   }, []);
 
   return (
-    <div className="text-sm text-stone-200 w-36 text-opacity-70">
+    <div className="text-sm text-stone-600 dark:text-stone-200 text-opacity-70 min-w-36.5">
       {time.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'numeric',

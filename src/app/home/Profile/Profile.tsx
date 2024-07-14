@@ -1,15 +1,16 @@
 import { Section } from '../../../components/Section/Section';
 import Image from 'next/image';
-import Time from '../Time/Time';
+import Time from './Time/Time';
 
 const Profile = () => (
   <Section className="mt-4">
-    <div className="flex flex-row justify-between">
+    <div className="flex flex-row justify-between text-black dark:text-white">
       <div className="flex flex-col justify-center">
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center justify-between max-w-72">
           <Time />
-          <div className="text-sm text-stone-200 text-opacity-70 md:text-md">
-            • Szeged, Hungary 🇭🇺
+          <div className="mr-1">•</div>
+          <div className="text-sm text-stone-600 dark:text-stone-200 text-opacity-70 md:text-md">
+            Szeged, Hungary 🇭🇺
           </div>
         </div>
         <h1 className="text-2xl font-black mt-2 md:text-3xl">

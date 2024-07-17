@@ -1,11 +1,11 @@
 import { IIcon } from './IIcon.interface';
 
-export const HamburgerIcon = ({ width, height, color }: IIcon) => (
+export const HamburgerIcon = ({ width, height, color, className }: IIcon) => (
   <svg
     width={width}
     height={height}
     viewBox="0 0 24 24"
-    fill="none"
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -13,18 +13,21 @@ export const HamburgerIcon = ({ width, height, color }: IIcon) => (
       stroke={color}
       strokeWidth="1.5"
       strokeLinecap="round"
+      fill={color}
     />
     <path
       d="M20 17H17M4 17L13 17"
       stroke={color}
       strokeWidth="1.5"
       strokeLinecap="round"
+      fill={color}
     />
     <path
       d="M4 12H7L20 12"
       stroke={color}
       strokeWidth="1.5"
       strokeLinecap="round"
+      fill={color}
     />
   </svg>
 );

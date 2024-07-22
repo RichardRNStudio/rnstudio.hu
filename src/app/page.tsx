@@ -1,5 +1,5 @@
-import Home from '@/app/home/page';
+import Home from './(home)';
 
-const App = () => <Home />;
-
-export default App;
+export default function Root() {
+  return <Home />;
+}

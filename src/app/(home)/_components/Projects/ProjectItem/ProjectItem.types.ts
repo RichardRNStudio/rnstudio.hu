@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
 export enum STACK {
   REACT = 'React',
   REACT_NATIVE = 'React Native',
   NEXT = 'Next.js',
   TYPESCRIPT = 'TYPESCRIPT',
+  C_SHARP = 'C#',
 }
+/* eslint-enable no-unused-vars */
 
 export type ProjectMain = {
   name: string;

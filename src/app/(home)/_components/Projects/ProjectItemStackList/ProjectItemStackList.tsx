@@ -26,6 +26,28 @@ const ProjectItemStackList = ({ stacks }: ProjectItemStackListProps) =>
         />
       );
     }
+    if (stack === STACK.TYPESCRIPT) {
+      return (
+        <StackImage
+          key={STACK.TYPESCRIPT}
+          width={85}
+          height={20}
+          stack={STACK.TYPESCRIPT}
+          src="https://img.shields.io/badge/-Typescript-3178C6?style=flat&logo=typescript&logoColor=FFF"
+        />
+      );
+    }
+    if (stack === STACK.C_SHARP) {
+      return (
+        <StackImage
+          key={STACK.C_SHARP}
+          width={27}
+          height={20}
+          stack={STACK.C_SHARP}
+          src="https://img.shields.io/badge/-C%23-239120?style=flat&logo=c-sharp&logoColor=white&logoColor=FFF"
+        />
+      );
+    }
     if (stack === STACK.NEXT)
       <StackImage
         key={STACK.NEXT}

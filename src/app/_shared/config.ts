@@ -1,4 +1,5 @@
 import {
+  Project,
   ProjectMain,
   STACK,
 } from '../(home)/_components/Projects/ProjectItem/ProjectItem.types';
@@ -24,6 +25,17 @@ export const REPOSITORIES: ProjectMain[] = [
     name: 'react-native-find-local-devices',
     stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT],
     npmLink: 'https://www.npmjs.com/package/react-native-find-local-devices',
+  },
+];
+
+export const CUSTOM_REPOSITORIES: Project[] = [
+  {
+    name: 'PC Controller',
+    description:
+      'Allows you to seamlessly control your Windows machine from your Android phone.',
+    stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT, STACK.C_SHARP],
+    githubLink: '',
+    stars: 0,
   },
 ];
 

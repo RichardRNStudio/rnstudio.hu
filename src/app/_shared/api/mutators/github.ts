@@ -1,5 +1,5 @@
 import { Project } from '@/app/(home)/_components/Projects/ProjectItem/ProjectItem.types';
-import { REPOSITORIES } from '../../config';
+import { CUSTOM_REPOSITORIES, REPOSITORIES } from '../../config';
 import { GithubRepository } from './github.types';
 
 export const transformGithubRepositories = (
@@ -25,5 +25,5 @@ export const transformGithubRepositories = (
           isNPMPackage: !!project.npmLink,
         },
       ];
-    }, [] as Project[])
+    }, CUSTOM_REPOSITORIES)
     .sort((a, b) => b.stars - a.stars);

@@ -10,7 +10,7 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
     <div
       className={classNames(
         isLoadingSkeleton && 'animate-pulse',
-        'p-4 border border-1 border-neutral-500 border-opacity-30 text-black dark:text-white rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer min-h-40 flex flex-col justify-between'
+        'border-neutral-500 border-opacity-30 text-black dark:text-white rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer flex flex-col justify-between'
       )}
     >
       <h4 className={classNames('font-black flex flex-row items-center gap-2')}>
@@ -56,7 +56,14 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
   }
 
   return (
-    <Link href={data.githubLink} target="_blank">
+    <Link
+      href={data.githubLink}
+      target="_blank"
+      className={classNames(
+        isLoadingSkeleton && 'animate-pulse',
+        'p-4 border border-1 border-neutral-500 border-opacity-30 text-black dark:text-white rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer min-h-40 flex flex-col justify-between'
+      )}
+    >
       <Skeleton />
     </Link>
   );

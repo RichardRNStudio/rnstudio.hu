@@ -1,7 +1,7 @@
 import React from 'react';
-import { IIcon } from './IIcon.interface';
+import { IconProps } from './Icon.interface';
 
-const SunIcon = ({ width, height, color, className, onClick }: IIcon) => (
+const SunIcon = ({ width, height, color, className, onClick }: IconProps) => (
   <svg
     width={width}
     height={height}

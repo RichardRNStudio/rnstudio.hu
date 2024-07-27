@@ -21,7 +21,7 @@ export const transformGithubRepositories = (
           ...project,
           description: repository.description,
           stars: repository.stargazers_count,
-          githubLink: repository.html_url,
+          link: repository.html_url,
           isNPMPackage: !!project.npmLink,
         },
       ];

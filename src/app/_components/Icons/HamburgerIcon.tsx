@@ -1,11 +1,10 @@
-import { IIcon } from './IIcon.interface';
+import { IconProps } from './Icon.interface';
 
-export const HamburgerIcon = ({ width, height, color, className }: IIcon) => (
+export const HamburgerIcon = ({ width, height, color }: IconProps) => (
   <svg
     width={width}
     height={height}
     viewBox="0 0 24 24"
-    className={className}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path

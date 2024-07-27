@@ -1,14 +1,12 @@
-import { IIcon } from './IIcon.interface';
+import { IconProps } from './Icon.interface';
 
-const ReactIcon = ({ width, height, className, onClick }: IIcon) => (
+const ReactIcon = ({ width, height }: IconProps) => (
   <svg
     width={width}
     height={height}
-    className={className}
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    onClick={onClick}
   >
     <path
       d="M18.6789 15.9759C18.6789 14.5415 17.4796 13.3785 16 13.3785C14.5206 13.3785 13.3211 14.5415 13.3211 15.9759C13.3211 17.4105 14.5206 18.5734 16 18.5734C17.4796 18.5734 18.6789 17.4105 18.6789 15.9759Z"

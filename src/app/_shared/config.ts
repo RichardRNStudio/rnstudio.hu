@@ -3,6 +3,7 @@ import {
   ProjectMain,
   STACK,
 } from '../(home)/_components/Projects/ProjectItem/ProjectItem.types';
+import { Job } from '../(home)/_components/Work/WorkItem/WorkItem.types';
 
 export const LINKS = [
   { index: 1, href: '/', label: 'About' },
@@ -14,6 +15,44 @@ export const THEMES = {
   light: 'light',
   dark: 'dark',
 } as const;
+
+export const JOBS: Job[] = [
+  {
+    company: {
+      name: 'One Beyond',
+      link: 'https://one-beyond.com',
+      logo: {
+        src: '/one_beyond_logo.jpeg',
+        alt: 'One Beyond logo',
+      },
+    },
+    position: 'Senior Software Engineer',
+    startDate: new Date('2019-07-22'),
+    endDate: new Date(),
+  },
+  {
+    company: {
+      name: 'PC Trade Systems',
+      link: 'https://pctrade.hu',
+      logo: {
+        src: '/pc_trade_systems_logo.jpeg',
+        alt: 'PC Trade Systems logo',
+      },
+    },
+    position: 'Junior Software Engineer',
+    startDate: new Date('2017-02-01'),
+    endDate: new Date('2019-07-19'),
+  },
+  {
+    company: {
+      name: 'PC Trade Systems',
+      link: 'https://pctrade.hu',
+    },
+    position: 'Intern',
+    startDate: new Date('2015-05-01'),
+    endDate: new Date('2017-01-31'),
+  },
+];
 
 export const REPOSITORIES: ProjectMain[] = [
   {
@@ -34,10 +73,18 @@ export const CUSTOM_REPOSITORIES: Project[] = [
     description:
       'Allows you to seamlessly control your Windows machine from your Android phone.',
     stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT, STACK.C_SHARP],
-    githubLink: '',
+    isGooglePlayIcon: true,
+    googlePlayLink:
+      'https://play.google.com/store/apps/details?id=com.pccontroller',
+    link: '/projects',
     stars: 0,
   },
 ];
+
+export const LINKED_IN_SOCIAL_URL =
+  'https://www.linkedin.com/in/richard-nagy-rnstudio';
+export const GITHUB_SOCIAL_URL = 'https://github.com/RichardRNStudio';
+export const X_SOCIAL_URL = 'https://x.com/Richard94231126';
 
 export const GITHUB_API_URL = 'https://api.github.com';
 export const GITHUB_USER = 'RichardRNStudio';

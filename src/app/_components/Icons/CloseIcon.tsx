@@ -1,7 +1,7 @@
 import React from 'react';
-import { IIcon } from './IIcon.interface';
+import { IconProps } from './Icon.interface';
 
-const CloseIcon = ({ width, height, color, className, onClick }: IIcon) => (
+const CloseIcon = ({ width, height, color, className, onClick }: IconProps) => (
   <svg
     width={width}
     height={height}

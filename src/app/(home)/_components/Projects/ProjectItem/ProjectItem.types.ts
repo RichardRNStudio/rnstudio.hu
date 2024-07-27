@@ -17,8 +17,10 @@ export type ProjectMain = {
 export type Project = {
   description: string;
   stars: number;
-  githubLink: string;
+  link: string;
   isNPMPackage?: boolean;
+  isGooglePlayIcon?: boolean;
+  googlePlayLink?: string;
 } & ProjectMain;
 
 interface ProjectItemPropsBase {

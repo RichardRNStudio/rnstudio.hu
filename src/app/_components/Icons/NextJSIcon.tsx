@@ -1,6 +1,6 @@
-import { IIcon } from './IIcon.interface';
+import { IconProps } from './Icon.interface';
 
-const NextJSIcon = ({ width, height, color, className }: IIcon) => (
+const NextJSIcon = ({ width, height, color }: IconProps) => (
   <svg
     width={width}
     height={height}
@@ -8,7 +8,6 @@ const NextJSIcon = ({ width, height, color, className }: IIcon) => (
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMid"
-    className={className}
   >
     <g>
       <path

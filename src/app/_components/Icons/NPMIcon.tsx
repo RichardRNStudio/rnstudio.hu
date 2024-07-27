@@ -1,12 +1,7 @@
 import React from 'react';
-import { IIcon } from './IIcon.interface';
+import { IconProps } from './Icon.interface';
 
-const NPMIcon = ({
-  width,
-  height,
-  className,
-  onClick,
-}: Omit<IIcon, 'color'>) => (
+const NPMIcon = ({ width, height, className }: Omit<IconProps, 'color'>) => (
   <svg
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +11,6 @@ const NPMIcon = ({
     height={height}
     viewBox="0 0 18 7"
     className={className}
-    onClick={onClick}
   >
     <path
       fill="#CB3837"

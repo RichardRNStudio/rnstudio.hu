@@ -1,12 +1,10 @@
-import { IIcon } from './IIcon.interface';
+import { IconProps } from './Icon.interface';
 
-const StarIcon = ({ width, height, className, color, onClick }: IIcon) => (
+const StarIcon = ({ width, height, color }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
     height={height}
-    className={className}
-    onClick={onClick}
     fill={color}
     viewBox="0 0 24 24"
   >

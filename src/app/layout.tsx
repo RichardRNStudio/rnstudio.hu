@@ -22,11 +22,14 @@ const Layout = ({
 }>) => (
   <html lang="en" suppressHydrationWarning>
     <body
-      className={classNames(inter.className, 'bg-none bg-white dark:bg-black')}
+      className={classNames(
+        inter.className,
+        'bg-none bg-white dark:bg-black min-h-screen flex flex-col'
+      )}
     >
       <ThemeProvider attribute="class">
         <Header />
-        <main className="py-6">
+        <main className="py-6 flex-grow">
           <Container>{children}</Container>
         </main>
         <Footer />

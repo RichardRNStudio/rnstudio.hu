@@ -8,13 +8,14 @@ import Link from 'next/link';
 const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
   const wrapperClassName = classNames(
     isLoadingSkeleton && 'animate-pulse',
-    'p-4 border border-1 border-neutral-500 border-opacity-30 text-black dark:text-white rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer min-h-40 flex flex-col justify-between'
+    'p-4 border border-1 border-neutral-500 border-opacity-30 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer min-h-40 flex flex-col justify-between'
   );
+
   const Skeleton = () => (
     <div className={classNames(isLoadingSkeleton && wrapperClassName)}>
       <h4
         className={classNames(
-          'font-black flex flex-row items-center gap-2 mb-2'
+          'font-black flex flex-row items-center gap-2 mb-2  text-black dark:text-white'
         )}
       >
         {!isLoadingSkeleton ? (
@@ -31,8 +32,8 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
       </h4>
       <p
         className={classNames(
-          isLoadingSkeleton && 'bg-slate-700 rounded w-80',
-          'min-h-16'
+          isLoadingSkeleton && 'bg-slate-700 rounded w-8',
+          'min-h-20 lg:min-h-16 text-gray-500 dark:text-gray-400'
         )}
       >
         {!isLoadingSkeleton && data.description}
@@ -45,7 +46,7 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
             <div className="bg-slate-700 rounded w-16 h-4" />
           )}
         </div>
-        <div className="flex flex-row gap-1 items-center justify-center">
+        <div className="flex flex-row gap-1 items-center justify-center text-gray-500 dark:text-gray-200">
           {!isLoadingSkeleton ? (
             <ProjectItemStars stars={data.stars} />
           ) : (

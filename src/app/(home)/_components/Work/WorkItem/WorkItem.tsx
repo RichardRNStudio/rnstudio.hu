@@ -13,17 +13,19 @@ const WorkItem = ({
   const isEndDateNow = endDateYear === new Date().getFullYear();
   return (
     <Link href={link} target="_blank">
-      <div className="w-full flex flex-row cursor-pointer hover:text-neutral-300 dark:hover:text-neutral-400 text-black dark:text-white">
-        <div className="w-2/12 sm:w-1/12">
-          {!!logo?.src && (
-            <CompanyLogo src={logo.src} alt={logo?.alt ?? 'Company Logo'} />
-          )}
+      <div className="w-full flex flex-row justify-between cursor-pointer hover:text-neutral-300 dark:hover:text-neutral-400 text-black dark:text-white">
+        <div className="flex flex-row gap-4 w-8/12">
+          <div className="w-14 min-w-14">
+            {!!logo?.src && (
+              <CompanyLogo src={logo.src} alt={logo?.alt ?? 'Company Logo'} />
+            )}
+          </div>
+          <div className="flex flex-col">
+            <div className="font-bold">{companyName}</div>
+            <div className="text-gray-40">{position}</div>
+          </div>
         </div>
-        <div className="w-7/12 sm:w-9/12 flex flex-col">
-          <div className="font-bold">{companyName}</div>
-          <div className="text-gray-40">{position}</div>
-        </div>
-        <div className="w-3/12 flex justify-end">
+        <div className="flex justify-end w-4/12">
           <span>
             {startDateYear} – {isEndDateNow ? <em>Now</em> : endDateYear}
           </span>

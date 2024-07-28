@@ -1,14 +1,8 @@
 import { IconProps } from './Icon.interface';
 
-const StarIcon = ({ width, height, color }: IconProps) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={width}
-    height={height}
-    fill={color}
-    viewBox="0 0 24 24"
-  >
-    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+const StarIcon = ({ width, height }: IconProps) => (
+  <svg viewBox="0 0 16 16" width={width} height={height} fill="currentColor">
+    <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z" />
   </svg>
 );
 

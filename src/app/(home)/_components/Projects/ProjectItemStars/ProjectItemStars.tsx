@@ -5,8 +5,8 @@ const ProjectItemStars = ({ stars }: ProjectItemStarsProps) => {
   if (stars === 0) return null;
   return (
     <>
-      <StarIcon width={15} height={15} color="gray" />
-      <span className="text-sm tracking-wider">{stars}</span>
+      <StarIcon width={16} height={16} />
+      <span className="text-sm tracking-wide">{stars}</span>
     </>
   );
 };

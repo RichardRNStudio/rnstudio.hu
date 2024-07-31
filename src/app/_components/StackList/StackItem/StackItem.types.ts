@@ -1,6 +1,6 @@
 import { ImageProps } from 'next/image';
 
-export interface StackImageProps {
+export interface StackItemProps {
   src: ImageProps['src'];
   stack: string;
   width: ImageProps['width'];

@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import ProjectItemName from '../ProjectItemName/ProjectItemName';
-import ProjectItemStackList from '../ProjectItemStackList/ProjectItemStackList';
 import ProjectItemStars from '../ProjectItemStars/ProjectItemStars';
 import { ProjectItemProps } from './ProjectItem.types';
 import Link from 'next/link';
+import StackList from '@/app/_components/StackList/StackList/StackList';
 
 const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
   const wrapperClassName = classNames(
@@ -41,7 +41,7 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
       <div className="flex flex-row items-center justify-between gap-3">
         <div className="flex flex-row gap-2">
           {!isLoadingSkeleton ? (
-            <ProjectItemStackList stacks={data.stacks} />
+            <StackList stacks={data.stacks} />
           ) : (
             <div className="bg-slate-700 rounded w-16 h-4" />
           )}
@@ -63,7 +63,7 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
 
   return (
     <div className={wrapperClassName}>
-      <Link href={data.link} target="_blank">
+      <Link href={data.link} target={data?.target}>
         <Skeleton />
       </Link>
     </div>

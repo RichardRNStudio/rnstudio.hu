@@ -5,12 +5,6 @@ import {
 } from '../(home)/_components/Projects/ProjectItem/ProjectItem.types';
 import { Job } from '../(home)/_components/Work/WorkItem/WorkItem.types';
 
-export const LINKS = [
-  { index: 1, href: '/', label: 'About' },
-  { index: 2, href: '/test', label: 'Projects' },
-  { index: 3, href: '/office', label: 'Office' },
-] as const;
-
 export const THEMES = {
   light: 'light',
   dark: 'dark',
@@ -67,19 +61,31 @@ export const REPOSITORIES: ProjectMain[] = [
   },
 ];
 
-export const CUSTOM_REPOSITORIES: Project[] = [
-  {
-    name: 'PC Controller',
-    description:
-      'Allows you to seamlessly control your Windows machine from your Android phone.',
-    stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT, STACK.C_SHARP],
-    isGooglePlayIcon: true,
-    googlePlayLink:
-      'https://play.google.com/store/apps/details?id=com.pccontroller',
-    link: '/projects',
-    stars: 0,
-  },
-];
+const PC_CONTROLLER_NAVIGATION_LINK = '/projects/pccontroller';
+
+export const LINKS = [
+  { index: 1, href: '/', label: 'About' },
+  { index: 2, href: PC_CONTROLLER_NAVIGATION_LINK, label: 'Projects' },
+  { index: 3, href: '/photos', label: 'Photos' },
+] as const;
+
+export const PC_CONTROLLER_PROJECT: Project = {
+  name: 'PC Controller',
+  description:
+    'Allows you to seamlessly control your Windows machine from your Android phone.',
+  stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT, STACK.C_SHARP, STACK.FIREBASE],
+  isGooglePlayIcon: true,
+  googlePlayLink:
+    'https://play.google.com/store/apps/details?id=com.pccontroller',
+  link: PC_CONTROLLER_NAVIGATION_LINK,
+  stars: 0,
+  year: 2020,
+  image: '/pc_controller_mockup.png',
+};
+
+export const CUSTOM_REPOSITORIES: Project[] = [PC_CONTROLLER_PROJECT];
+
+export const WEBSITE = 'https://rnstudio.hu';
 
 export const LINKED_IN_SOCIAL_URL =
   'https://www.linkedin.com/in/richard-nagy-rnstudio';

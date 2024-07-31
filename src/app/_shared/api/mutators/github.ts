@@ -23,6 +23,7 @@ export const transformGithubRepositories = (
           stars: repository.stargazers_count,
           link: repository.html_url,
           isNPMPackage: !!project.npmLink,
+          target: '_blank',
         },
       ];
     }, CUSTOM_REPOSITORIES)

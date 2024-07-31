@@ -1,3 +1,5 @@
+import { HTMLAttributeAnchorTarget } from 'react';
+
 /* eslint-disable no-unused-vars */
 export enum STACK {
   REACT = 'React',
@@ -5,6 +7,7 @@ export enum STACK {
   NEXT = 'Next.js',
   TYPESCRIPT = 'TYPESCRIPT',
   C_SHARP = 'C#',
+  FIREBASE = 'Firebase',
 }
 /* eslint-enable no-unused-vars */
 
@@ -21,6 +24,9 @@ export type Project = {
   isNPMPackage?: boolean;
   isGooglePlayIcon?: boolean;
   googlePlayLink?: string;
+  target?: HTMLAttributeAnchorTarget;
+  year?: number;
+  image?: string;
 } & ProjectMain;
 
 interface ProjectItemPropsBase {

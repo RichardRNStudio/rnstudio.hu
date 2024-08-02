@@ -97,7 +97,8 @@ export const EMAIL = 'riiichj@gmail.com';
 export const LINKED_IN_SOCIAL_URL =
   'https://www.linkedin.com/in/richard-nagy-rnstudio';
 export const GITHUB_SOCIAL_URL = 'https://github.com/RichardRNStudio';
-export const X_SOCIAL_URL = 'https://x.com/Richard94231126';
+export const X_SOCIAL_ID = 'Richard94231126';
+export const X_SOCIAL_URL = `https://x.com/${X_SOCIAL_ID}`;
 
 export const GITHUB_API_URL = 'https://api.github.com';
 export const GITHUB_USER = 'RichardRNStudio';

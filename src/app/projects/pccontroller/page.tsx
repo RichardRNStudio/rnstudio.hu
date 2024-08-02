@@ -2,6 +2,14 @@ import { PC_CONTROLLER_PROJECT } from '@/app/_shared/config';
 import Image from 'next/image';
 import Link from 'next/link';
 import Template from '../_components/Template/Template';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: PC_CONTROLLER_PROJECT.name,
+  alternates: {
+    canonical: '/projects/pccontroller',
+  },
+};
 
 const PCControllerPage = () => (
   <Template

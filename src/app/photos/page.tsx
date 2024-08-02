@@ -49,22 +49,17 @@ const IMAGES: Photo[] = [
 const font = Edu_VIC_WA_NT_Beginner({ subsets: ['latin'] });
 
 const PhotosPage = () => (
-  <div className="grid grid-cols-3 gap-5">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center">
     {IMAGES.map(({ link, alt, label }, index) => (
       <div
         key={index}
-        className={classNames(
-          'flex flex-col items-center gap-2 p-2 dark:bg-white rounded-lg shadow-lg transition-transform',
-          index % 2 === 0
-            ? 'rotate-1 hover:rotate-0'
-            : '-rotate-1 hover:rotate-0'
-        )}
+        className="flex flex-col items-center gap-2 p-2 dark:bg-white rounded-lg shadow-lg transition-transform hover:rotate-1 max-w-xs"
       >
         <Image src={link} alt={alt} width={300} height={300} />
         <span
           className={classNames(
             font.className,
-            'text-black text-lg font-black'
+            'text-black text-3xl font-black'
           )}
         >
           {label}

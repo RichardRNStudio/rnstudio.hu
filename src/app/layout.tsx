@@ -10,7 +10,7 @@ import Footer from './_components/Footer/Footer';
 import OpenToWork from './_components/OpenToWork/OpenToWork';
 import { IS_OPEN_TO_WORK } from './_shared/config';
 
-const inter = Quicksand({ subsets: ['latin'] });
+const quickSand = Quicksand({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Richárd Nagy - Javascript Engineer',
@@ -25,7 +25,7 @@ const Layout = ({
   <html lang="en" suppressHydrationWarning>
     <body
       className={classNames(
-        inter.className,
+        quickSand.className,
         'bg-none bg-white dark:bg-black min-h-screen flex flex-col'
       )}
     >

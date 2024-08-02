@@ -20,7 +20,7 @@ const MobileNavigation = () => {
         </button>
       </div>
       {isMobileMenuOpen && (
-        <div className="fixed z-20 top-0 bottom-0 left-0 right-0 min-h-screen flex items-center justify-center bg-white dark:bg-black">
+        <div className="fixed top-0 bottom-0 left-0 right-0 min-h-screen flex items-center justify-center bg-white dark:bg-black">
           <CloseIcon
             width="40px"
             height="40px"

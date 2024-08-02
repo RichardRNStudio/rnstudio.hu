@@ -8,7 +8,7 @@ import StackList from '@/app/_components/StackList/StackList/StackList';
 const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
   const wrapperClassName = classNames(
     isLoadingSkeleton && 'animate-pulse',
-    'p-4 border border-1 border-neutral-500 border-opacity-30 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer min-h-40 flex flex-col justify-between'
+    'p-4 border border-neutral-500 border-opacity-30 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer min-h-40 flex flex-col justify-between'
   );
 
   const Skeleton = () => (

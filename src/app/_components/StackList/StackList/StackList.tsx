@@ -65,6 +65,16 @@ const StackList = ({ stacks }: StackListProps) =>
             height={20}
           />
         );
+      case STACK.TAILWIND:
+        return (
+          <StackItem
+            key={STACK.TAILWIND}
+            stack={STACK.TAILWIND}
+            src="https://img.shields.io/badge/-Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=FFF"
+            width={99}
+            height={20}
+          />
+        );
       default:
         return null;
     }

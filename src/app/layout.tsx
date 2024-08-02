@@ -7,6 +7,8 @@ import './globals.css';
 import Header from './_components/Header/Header';
 import Container from './_components/Container/Container';
 import Footer from './_components/Footer/Footer';
+import OpenToWork from './_components/OpenToWork/OpenToWork';
+import { IS_OPEN_TO_WORK } from './_shared/config';
 
 const inter = Quicksand({ subsets: ['latin'] });
 
@@ -29,6 +31,7 @@ const Layout = ({
     >
       <ThemeProvider attribute="class">
         <Header />
+        {IS_OPEN_TO_WORK && <OpenToWork />}
         <main className="py-6 flex-grow">
           <Container>{children}</Container>
         </main>

@@ -5,6 +5,8 @@ import {
 } from '../(home)/_components/Projects/ProjectItem/ProjectItem.types';
 import { Job } from '../(home)/_components/Work/WorkItem/WorkItem.types';
 
+export const IS_OPEN_TO_WORK = true;
+
 export const THEMES = {
   light: 'light',
   dark: 'dark',
@@ -59,13 +61,17 @@ export const REPOSITORIES: ProjectMain[] = [
     stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT],
     npmLink: 'https://www.npmjs.com/package/react-native-find-local-devices',
   },
+  {
+    name: 'rnstudio.hu',
+    stacks: [STACK.NEXT, STACK.REACT, STACK.TYPESCRIPT, STACK.TAILWIND],
+  },
 ];
 
 const PC_CONTROLLER_NAVIGATION_LINK = '/projects/pccontroller';
 
 export const LINKS = [
   { index: 1, href: '/', label: 'About' },
-  { index: 2, href: PC_CONTROLLER_NAVIGATION_LINK, label: 'Projects' },
+  // { index: 2, href: PC_CONTROLLER_NAVIGATION_LINK, label: 'Projects' },
   { index: 3, href: '/photos', label: 'Photos' },
 ] as const;
 
@@ -86,6 +92,7 @@ export const PC_CONTROLLER_PROJECT: Project = {
 export const CUSTOM_REPOSITORIES: Project[] = [PC_CONTROLLER_PROJECT];
 
 export const WEBSITE = 'https://rnstudio.hu';
+export const EMAIL = 'riiichj@gmail.com';
 
 export const LINKED_IN_SOCIAL_URL =
   'https://www.linkedin.com/in/richard-nagy-rnstudio';

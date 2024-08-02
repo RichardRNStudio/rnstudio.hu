@@ -8,6 +8,7 @@ export enum STACK {
   TYPESCRIPT = 'TYPESCRIPT',
   C_SHARP = 'C#',
   FIREBASE = 'Firebase',
+  TAILWIND = 'Tailwind',
 }
 /* eslint-enable no-unused-vars */
 
@@ -19,8 +20,8 @@ export type ProjectMain = {
 
 export type Project = {
   description: string;
-  stars: number;
   link: string;
+  stars: number;
   isNPMPackage?: boolean;
   isGooglePlayIcon?: boolean;
   googlePlayLink?: string;

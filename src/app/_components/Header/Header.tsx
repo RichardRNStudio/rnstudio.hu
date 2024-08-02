@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Container from '../Container/Container';
 import { DesktopNavigation } from './DesktopNavigation/DesktopNavigation';
 import MobileNavigation from './MobileNavigation/MobileNavigation';
@@ -9,7 +10,7 @@ const Header = () => {
       <Container className="w-full">
         <nav className="flex justify-between">
           <div className="flex items-center text-black dark:text-white">
-            RNStudio
+            <Link href="/">RNStudio</Link>
           </div>
           <div className="flex flex-row items-center gap-4">
             <DesktopNavigation />

@@ -5,6 +5,7 @@ import Template from '../_components/Template/Template';
 
 export const metadata: Metadata = {
   title: PC_CONTROLLER_PROJECT.name,
+  description: PC_CONTROLLER_PROJECT.description,
   alternates: {
     canonical: '/projects/pccontroller',
   },

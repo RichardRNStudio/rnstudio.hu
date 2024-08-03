@@ -1,0 +1,52 @@
+name: Deploy rnstudio.hu
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to deploy from
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the Next.js app
+        run: npm run build
+
+      - name: Upload files via FTP
+        uses: sebastianpopp/ftp-action@v1
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: .next  # The directory to upload
+          remote-dir: /path/to/remote/dir  # The target directory on your FTP server
+
+      - name: Upload public files via FTP
+        uses: sebastianpopp/ftp-action@v1
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: public  # The directory to upload
+          remote-dir: /path/to/remote/dir/public  # The target directory on your FTP server
+
+      - name: Upload static files via FTP
+        uses: sebastianpopp/ftp-action@v1
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: out  # The directory to upload
+          remote-dir: /path/to/remote/dir/out  # The target directory on your FTP server

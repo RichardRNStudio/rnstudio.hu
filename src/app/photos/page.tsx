@@ -2,6 +2,17 @@ import { Photo } from './photo.types';
 import Image from 'next/image';
 import { Edu_VIC_WA_NT_Beginner } from 'next/font/google';
 import classNames from 'classnames';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Photos',
+  alternates: {
+    canonical: '/photos',
+  },
+  openGraph: {
+    url: '/photos',
+  },
+};
 
 const IMAGES: Photo[] = [
   {

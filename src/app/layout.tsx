@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(WEBSITE),
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'en-US',
     siteName: 'Richárd Nagy',
     url: WEBSITE,
   },

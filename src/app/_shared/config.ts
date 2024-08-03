@@ -74,7 +74,7 @@ const PC_CONTROLLER_NAVIGATION_LINK = '/projects/pccontroller';
 
 export const LINKS = [
   { index: 1, href: '/', label: 'About' },
-  // { index: 2, href: PC_CONTROLLER_NAVIGATION_LINK, label: 'Projects' },
+  // { index: 2, href: PC_CONTROLLER_NAVIGATION_LINK, label: 'Projects' }, // TODO: extend
   { index: 3, href: '/photos', label: 'Photos' },
 ] as const;
 

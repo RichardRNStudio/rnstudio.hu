@@ -45,7 +45,12 @@ const Layout = ({
       <ThemeProvider attribute="class">
         <Header />
         {IS_OPEN_TO_WORK && <OpenToWork />}
-        <main className="py-6 flex-grow">
+        <main
+          className={classNames(
+            'flex-grow',
+            IS_OPEN_TO_WORK ? 'pt-1 pb-6' : 'py-6'
+          )}
+        >
           <Container>{children}</Container>
         </main>
         <Footer />

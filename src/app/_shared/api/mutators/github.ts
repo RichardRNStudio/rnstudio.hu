@@ -22,7 +22,6 @@ export const transformGithubRepositories = (
           description: repository.description,
           stars: repository.stargazers_count,
           link: repository.html_url,
-          isNPMPackage: !!project.npmLink,
           target: '_blank',
         },
       ];

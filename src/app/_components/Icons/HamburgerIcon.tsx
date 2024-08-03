@@ -1,6 +1,10 @@
 import { IconProps } from './Icon.interface';
 
-export const HamburgerIcon = ({ width, height, color }: IconProps) => (
+export const HamburgerIcon = ({
+  width,
+  height,
+  color = 'black',
+}: IconProps) => (
   <svg
     width={width}
     height={height}
@@ -12,21 +16,18 @@ export const HamburgerIcon = ({ width, height, color }: IconProps) => (
       stroke={color}
       strokeWidth="1.5"
       strokeLinecap="round"
-      fill={color}
     />
     <path
       d="M20 17H17M4 17L13 17"
       stroke={color}
       strokeWidth="1.5"
       strokeLinecap="round"
-      fill={color}
     />
     <path
       d="M4 12H7L20 12"
       stroke={color}
       strokeWidth="1.5"
       strokeLinecap="round"
-      fill={color}
     />
   </svg>
 );

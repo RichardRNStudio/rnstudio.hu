@@ -6,7 +6,6 @@ const Template = ({
   children,
   title,
   year,
-  views,
   image,
   stacks,
 }: ProjectsTemplateProps) => (
@@ -21,9 +20,6 @@ const Template = ({
       <div className="flex flex-col sm:flex-row gap-2 mt-3 justify-between">
         <div className="flex flex-row text-sm text-gray-400">
           {year && <p>{year}</p>}
-          {views > 10 && (
-            <p className='before:px-1 before:content-["•"]'>{views} views</p>
-          )}
         </div>
         <div className="flex flex-row gap-2">
           <StackList stacks={stacks} />

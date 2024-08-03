@@ -5,26 +5,26 @@ export enum STACK {
   REACT = 'React',
   REACT_NATIVE = 'React Native',
   NEXT = 'Next.js',
-  TYPESCRIPT = 'TYPESCRIPT',
+  TYPESCRIPT = 'Typescript',
   C_SHARP = 'C#',
   FIREBASE = 'Firebase',
-  TAILWIND = 'Tailwind',
+  TAILWIND = 'Tailwind CSS',
 }
 /* eslint-enable no-unused-vars */
 
 export type ProjectMain = {
   name: string;
   stacks: STACK[];
-  npmLink?: string;
+  isNPMPackage?: boolean;
+  isGooglePlayApp?: boolean;
+  googlePlayLink?: string;
+  npmPackageLink?: string;
 };
 
 export type Project = {
   description: string;
   link: string;
   stars: number;
-  isNPMPackage?: boolean;
-  isGooglePlayIcon?: boolean;
-  googlePlayLink?: string;
   target?: HTMLAttributeAnchorTarget;
   year?: number;
   image?: string;

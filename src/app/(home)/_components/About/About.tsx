@@ -13,8 +13,10 @@ const AboutMe = () => {
           {`Currently, I'm working at`}{' '}
           <a
             href="https://one-beyond.com"
+            rel="noopener noreferrer"
             className="underline hover:text-gray-300"
             target="_blank"
+            title="One Beyond"
           >
             One Beyond
           </a>

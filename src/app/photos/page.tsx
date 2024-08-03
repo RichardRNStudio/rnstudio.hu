@@ -53,9 +53,16 @@ const PhotosPage = () => (
     {IMAGES.map(({ link, alt, label }, index) => (
       <div
         key={index}
+        title={label}
         className="flex flex-col items-center gap-2 p-2 dark:bg-white rounded-lg shadow-lg transition-transform hover:rotate-1 max-w-xs"
       >
-        <Image src={link} alt={alt} width={300} height={300} />
+        <Image
+          src={link}
+          alt={alt}
+          width={300}
+          height={300}
+          loading={index < 4 ? 'eager' : 'lazy'}
+        />
         <span
           className={classNames(
             font.className,

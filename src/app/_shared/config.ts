@@ -54,12 +54,15 @@ export const REPOSITORIES: ProjectMain[] = [
   {
     name: 'react-native-slider-intro',
     stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT],
-    npmLink: 'https://www.npmjs.com/package/react-native-slider-intro',
+    isNPMPackage: true,
+    npmPackageLink: 'https://www.npmjs.com/package/react-native-slider-intro',
   },
   {
     name: 'react-native-find-local-devices',
     stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT],
-    npmLink: 'https://www.npmjs.com/package/react-native-find-local-devices',
+    isNPMPackage: true,
+    npmPackageLink:
+      'https://www.npmjs.com/package/react-native-find-local-devices',
   },
   {
     name: 'rnstudio.hu',
@@ -80,10 +83,10 @@ export const PC_CONTROLLER_PROJECT: Project = {
   description:
     'Allows you to seamlessly control your Windows machine from your Android phone.',
   stacks: [STACK.REACT_NATIVE, STACK.TYPESCRIPT, STACK.C_SHARP, STACK.FIREBASE],
-  isGooglePlayIcon: true,
+  isGooglePlayApp: true,
+  link: PC_CONTROLLER_NAVIGATION_LINK,
   googlePlayLink:
     'https://play.google.com/store/apps/details?id=com.pccontroller',
-  link: PC_CONTROLLER_NAVIGATION_LINK,
   stars: 0,
   year: 2020,
   image: '/pc_controller_mockup.png',

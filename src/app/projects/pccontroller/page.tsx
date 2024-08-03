@@ -1,8 +1,7 @@
 import { PC_CONTROLLER_PROJECT } from '@/app/_shared/config';
-import Image from 'next/image';
-import Link from 'next/link';
-import Template from '../_components/Template/Template';
 import { Metadata } from 'next';
+import Image from 'next/image';
+import Template from '../_components/Template/Template';
 
 export const metadata: Metadata = {
   title: PC_CONTROLLER_PROJECT.name,
@@ -14,17 +13,16 @@ export const metadata: Metadata = {
 const PCControllerPage = () => (
   <Template
     title={PC_CONTROLLER_PROJECT.name}
-    views={1500}
     year={PC_CONTROLLER_PROJECT.year}
     stacks={PC_CONTROLLER_PROJECT.stacks}
     image={PC_CONTROLLER_PROJECT?.image}
   >
     <p className="mb-3 text-justify">
-      <b>PC Controller</b> is a cutting-edge mobile application developed with
-      React Native and TypeScript, designed to bring the power of your Windows
-      PC right to your Android phone. This app transforms your smartphone into a
-      versatile remote control, providing seamless interaction with your PC from
-      anywhere in the room.
+      <b>{PC_CONTROLLER_PROJECT.name}</b> is a cutting-edge mobile application
+      developed with React Native and TypeScript, designed to bring the power of
+      your Windows PC right to your Android phone. This app transforms your
+      smartphone into a versatile remote control, providing seamless interaction
+      with your PC from anywhere in the room.
     </p>
     <h2 className="mb-3 text-md font-black">Key Features:</h2>
     <ul className="ml-2 sm:ml-3 space-y-4 list-disc list-inside text-justify">
@@ -70,14 +68,19 @@ const PCControllerPage = () => (
       control media playback, or change light settings, this app has you
       covered.
     </p>
-    <Link href={PC_CONTROLLER_PROJECT.googlePlayLink ?? '#'}>
+    <a
+      href={PC_CONTROLLER_PROJECT.link ?? '#'}
+      rel="noopener noreferrer"
+      target="_blank"
+      title={PC_CONTROLLER_PROJECT.name}
+    >
       <Image
         src="https://img.shields.io/badge/-Available_on_Google_Play-414141?style=flat&logo=google-play&logoColor=FFF"
         width={250}
         height={75}
         alt="Available on Google Play"
       />
-    </Link>
+    </a>
   </Template>
 );
 

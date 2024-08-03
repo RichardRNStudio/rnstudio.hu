@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import { Job } from './WorkItem.types';
 import CompanyLogo from '../CompanyLogo/CompanyLogo';
+import { Job } from './WorkItem.types';
 
 const WorkItem = ({
   company: { name: companyName, link, logo },
@@ -12,7 +11,12 @@ const WorkItem = ({
   const endDateYear = endDate.getFullYear();
   const isEndDateNow = endDateYear === new Date().getFullYear();
   return (
-    <Link href={link} target="_blank">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`${companyName} - ${position}`}
+    >
       <div className="w-full flex flex-row justify-between cursor-pointer hover:text-neutral-300 dark:hover:text-neutral-400 text-black dark:text-white">
         <div className="flex flex-row gap-4 w-8/12">
           <div className="w-14 min-w-14">
@@ -31,7 +35,7 @@ const WorkItem = ({
           </span>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

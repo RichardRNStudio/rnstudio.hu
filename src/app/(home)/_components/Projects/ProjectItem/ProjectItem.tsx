@@ -1,9 +1,8 @@
+import StackList from '@/app/_components/StackList/StackList/StackList';
 import classNames from 'classnames';
 import ProjectItemName from '../ProjectItemName/ProjectItemName';
 import ProjectItemStars from '../ProjectItemStars/ProjectItemStars';
 import { ProjectItemProps } from './ProjectItem.types';
-import Link from 'next/link';
-import StackList from '@/app/_components/StackList/StackList/StackList';
 
 const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
   const wrapperClassName = classNames(
@@ -22,9 +21,7 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
           <ProjectItemName
             name={data.name}
             isNPMPackage={data.isNPMPackage}
-            npmLink={data.npmLink}
-            isGooglePlayApp={data.isGooglePlayIcon}
-            googlePlayLink={data.googlePlayLink}
+            isGooglePlayApp={data.isGooglePlayApp}
           />
         ) : (
           <div className="bg-slate-700 rounded w-60 h-5" />
@@ -63,9 +60,14 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
 
   return (
     <div className={wrapperClassName}>
-      <Link href={data.link} target={data?.target}>
+      <a
+        href={data.link}
+        target={data?.target}
+        rel="noopener noreferrer"
+        title={data.name}
+      >
         <Skeleton />
-      </Link>
+      </a>
     </div>
   );
 };

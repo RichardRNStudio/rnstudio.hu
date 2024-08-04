@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Edu_VIC_WA_NT_Beginner } from 'next/font/google';
 import classNames from 'classnames';
 import { Metadata } from 'next';
+import Container from '../_components/Container/Container';
 
 export const metadata: Metadata = {
   title: 'Photos',
@@ -58,36 +59,38 @@ const PhotosPage = () => {
   const sortedImagesByYear = IMAGES.sort((a, b) => b.year - a.year);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center">
-      {sortedImagesByYear.map(({ link, label, year }, index) => {
-        const title = label.replace('YEAR', `${year % 100}`);
-        return (
-          <div
-            key={index}
-            title={title}
-            className="flex flex-col items-center gap-2 p-2 dark:bg-white rounded-lg shadow-lg transition-transform hover:rotate-1 max-w-xs"
-          >
-            <Image
-              src={link}
-              alt={title}
-              width={350}
-              height={300}
-              loading={index < 4 ? 'eager' : 'lazy'}
-              sizes="(max-width: 640px) 50vw, (max-width: 768px) 40vw, (max-width: 1536px) 33vw, 25vw"
-            />
-            <span
-              className={classNames(
-                font.className,
-                'text-black text-xl font-black tracking-wide',
-                index % 2 === 0 ? 'rotate-1' : '-rotate-1'
-              )}
+    <Container className="md:w-10/12 xl:w-9/12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center">
+        {sortedImagesByYear.map(({ link, label, year }, index) => {
+          const title = label.replace('YEAR', `${year % 100}`);
+          return (
+            <div
+              key={index}
+              title={title}
+              className="flex flex-col items-center gap-2 p-2 dark:bg-white rounded-lg shadow-xl transition-transform hover:rotate-1"
             >
-              {title}
-            </span>
-          </div>
-        );
-      })}
-    </div>
+              <Image
+                src={link}
+                alt={title}
+                width={400}
+                height={400}
+                loading={index < 4 ? 'eager' : 'lazy'}
+                sizes="(max-width: 640px) 50vw, (max-width: 768px) 40vw, (max-width: 1536px) 33vw, 25vw"
+              />
+              <span
+                className={classNames(
+                  font.className,
+                  'text-black text-xl font-black tracking-wide',
+                  index % 2 === 0 ? 'rotate-1' : '-rotate-1'
+                )}
+              >
+                {title}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </Container>
   );
 };
 

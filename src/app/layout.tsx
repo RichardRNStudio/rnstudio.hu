@@ -3,12 +3,11 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import { Quicksand } from 'next/font/google';
 import React from 'react';
-import './globals.css';
-import Header from './_components/Header/Header';
-import Container from './_components/Container/Container';
 import Footer from './_components/Footer/Footer';
+import Header from './_components/Header/Header';
 import OpenToWork from './_components/OpenToWork/OpenToWork';
 import { IS_OPEN_TO_WORK, WEBSITE, X_SOCIAL_ID } from './_shared/config';
+import './globals.css';
 
 const quickSand = Quicksand({ subsets: ['latin'] });
 
@@ -51,7 +50,7 @@ const Layout = ({
             IS_OPEN_TO_WORK ? 'pt-1 pb-6' : 'py-6'
           )}
         >
-          <Container>{children}</Container>
+          {children}
         </main>
         <Footer />
       </ThemeProvider>

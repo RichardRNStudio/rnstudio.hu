@@ -1,3 +1,4 @@
+import Container from '../_components/Container/Container';
 import {
   GITHUB_SOCIAL_URL,
   LINKED_IN_SOCIAL_URL,
@@ -19,10 +20,12 @@ const Home = () => (
       url={WEBSITE}
       sameAs={[GITHUB_SOCIAL_URL, X_SOCIAL_URL, LINKED_IN_SOCIAL_URL]}
     />
-    <Profile />
-    <AboutMe />
-    <Work />
-    <Projects />
+    <Container>
+      <Profile />
+      <AboutMe />
+      <Work />
+      <Projects />
+    </Container>
   </>
 );
 

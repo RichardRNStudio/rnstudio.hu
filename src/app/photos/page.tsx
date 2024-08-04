@@ -16,20 +16,40 @@ export const metadata: Metadata = {
 
 const IMAGES: Photo[] = [
   {
-    link: '/madrid_2.jpeg',
+    link: '/madrid_3.jpg',
     label: "Madrid YEAR' 🇪🇦",
     year: 2022,
   },
   {
-    link: '/madrid_4.jpeg',
+    link: '/madrid_4.jpg',
     label: "Madrid YEAR' 🇪🇦",
     year: 2022,
   },
-  // {
-  //   link: '/utt.jpg',
-  //   label: "UTT YEAR' 🇭🇺",
-  //   year: 2018,
-  // },
+  {
+    link: '/madrid_1.jpg',
+    label: "Madrid YEAR' 🇪🇦",
+    year: 2022,
+  },
+  {
+    link: '/madrid_2.jpg',
+    label: "Madrid YEAR' 🇪🇦",
+    year: 2022,
+  },
+  {
+    link: '/ub_1.jpg',
+    label: "UltraBalaton YEAR' 🇭🇺",
+    year: 2019,
+  },
+  {
+    link: '/ub_2.jpg',
+    label: "UltraBalaton YEAR' 🇭🇺",
+    year: 2018,
+  },
+  {
+    link: '/utt.jpg',
+    label: "UTT YEAR' 🇭🇺",
+    year: 2018,
+  },
 ];
 
 const font = Edu_VIC_WA_NT_Beginner({ subsets: ['latin'] });
@@ -50,15 +70,15 @@ const PhotosPage = () => {
             <Image
               src={link}
               alt={title}
-              width={300}
+              width={350}
               height={300}
               loading={index < 4 ? 'eager' : 'lazy'}
-              style={{ width: '100%', height: '100%' }}
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 40vw, (max-width: 1536px) 33vw, 25vw"
             />
             <span
               className={classNames(
                 font.className,
-                'text-black text-xl font-black',
+                'text-black text-xl font-black tracking-wide',
                 index % 2 === 0 ? 'rotate-1' : '-rotate-1'
               )}
             >

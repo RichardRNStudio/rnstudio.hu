@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { PluginAPI } from 'tailwindcss/types/config';
 
 const config: Config = {
   content: [
@@ -40,7 +41,7 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addUtilities }) {
+    function ({ addUtilities }: { addUtilities: PluginAPI['addUtilities'] }) {
       const newUtilities = {
         '.animation-fill-forwards': {
           'animation-fill-mode': 'forwards',
@@ -55,7 +56,7 @@ const config: Config = {
           'animation-fill-mode': 'none',
         },
       };
-      addUtilities(newUtilities, ['responsive', 'hover']);
+      addUtilities(newUtilities);
     },
   ],
 };

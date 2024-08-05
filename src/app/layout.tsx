@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   },
   description: "I'm Richárd Nagy, a Javascript Engineer based in Hungary.",
   metadataBase: new URL(WEBSITE),
+  creator: 'Richárd Nagy',
+  keywords: ['Richárd Nagy', 'Javascript Engineer', 'Remote'],
+  robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
     locale: 'en-US',

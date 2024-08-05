@@ -1,7 +1,6 @@
 'use client';
 
-import { EMAIL } from '@/app/_shared/config';
-import { STORAGE_ITEMS } from '@/app/_shared/constants';
+import { EMAIL, STORAGE_ITEMS } from '@/app/_shared/config';
 import { getLocalStorageItem, setLocalStorageItem } from '@/app/_shared/utils';
 import { useEffect, useState } from 'react';
 import Container from '../Container/Container';

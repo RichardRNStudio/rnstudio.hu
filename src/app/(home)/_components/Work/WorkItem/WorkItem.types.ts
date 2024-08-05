@@ -1,4 +1,4 @@
-import { CompanyLogoProps } from '../components/CompanyLogo/CompanyLogo.types';
+import { CompanyLogoProps } from '../CompanyLogo/CompanyLogo.types';
 
 export type Job = {
   company: {

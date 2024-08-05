@@ -1,4 +1,7 @@
-import { PC_CONTROLLER_PROJECT } from '@/app/_shared/config';
+import {
+  PC_CONTROLLER_NAVIGATION_LINK,
+  PC_CONTROLLER_PROJECT,
+} from '@/app/_shared/config';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Template from '../_components/Template/Template';
@@ -7,7 +10,7 @@ export const metadata: Metadata = {
   title: PC_CONTROLLER_PROJECT.name,
   description: PC_CONTROLLER_PROJECT.description,
   alternates: {
-    canonical: '/projects/pccontroller',
+    canonical: PC_CONTROLLER_NAVIGATION_LINK,
   },
 };
 

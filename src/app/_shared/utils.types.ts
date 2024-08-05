@@ -1,4 +1,4 @@
-import { STORAGE_ITEMS } from './constants';
+import { STORAGE_ITEMS } from './config';
 
 export type LocalStorageItemValue = {
   [STORAGE_ITEMS.OPEN_TO_WORK_CLOSED]: boolean;

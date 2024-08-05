@@ -18,6 +18,9 @@ export const callAPI = async <Response, Data>({
     const data = await response.json();
     return mutator(data);
   } catch (error) {
+    if (process.env.NODE_ENV === 'development') {
+      console.error(error);
+    }
     throw new Error('API call failed');
   }
 };

@@ -4,6 +4,7 @@ import {
   STACK,
 } from '../(home)/_components/Projects/ProjectItem/ProjectItem.types';
 import { Job } from '../(home)/_components/Work/WorkItem/WorkItem.types';
+import { NavigationLink } from './types';
 
 export const IS_OPEN_TO_WORK = true;
 
@@ -70,13 +71,35 @@ export const REPOSITORIES: ProjectMain[] = [
   },
 ];
 
-const PC_CONTROLLER_NAVIGATION_LINK = '/projects/pccontroller';
+export const PC_CONTROLLER_NAVIGATION_LINK = '/projects/pccontroller';
 
-export const LINKS = [
-  { index: 1, href: '/', label: 'About' },
-  // { index: 2, href: PC_CONTROLLER_NAVIGATION_LINK, label: 'Projects' }, // TODO: extend
-  { index: 3, href: '/photos', label: 'Photos' },
-] as const;
+export const LINKS: NavigationLink[] = [
+  {
+    index: 1,
+    href: '/',
+    label: 'About',
+    changeFrequency: 'monthly',
+    priority: 1,
+    isAvailable: true,
+  },
+  {
+    index: 2,
+    href: PC_CONTROLLER_NAVIGATION_LINK,
+    label: 'PC Controller',
+    changeFrequency: 'monthly',
+    priority: 0.6,
+    isHidden: true,
+    isAvailable: true,
+  },
+  {
+    index: 3,
+    href: '/photos',
+    label: 'Photos',
+    changeFrequency: 'monthly',
+    priority: 0.5,
+    isAvailable: true,
+  },
+];
 
 export const PC_CONTROLLER_PROJECT: Project = {
   name: 'PC Controller',
@@ -106,3 +129,7 @@ export const X_SOCIAL_URL = `https://x.com/${X_SOCIAL_ID}`;
 export const GITHUB_API_URL = 'https://api.github.com';
 export const GITHUB_USER = 'RichardRNStudio';
 export const GITHUB_TOKEN = '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'; // TODO: Remove it from here (and generate a new one before publishing the project)
+
+export const STORAGE_ITEMS = {
+  OPEN_TO_WORK_CLOSED: 'isOpenToWorkBannerClosed',
+} as const;

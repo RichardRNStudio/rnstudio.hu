@@ -1,12 +1,14 @@
 {
   "root": true,
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "next",
     "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "@typescript-eslint"],
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true, "semi": true }],
     "react-hooks/exhaustive-deps": "off"

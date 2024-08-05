@@ -11,7 +11,6 @@ export const callAPI = async <Response, Data>({
   requestOptions,
 }: APIOptions<Response, Data>) => {
   try {
-    console.log({ url });
     const response = await fetch(url, requestOptions);
     if (!response.ok) {
       throw new Error('API call failed - Response not OK');

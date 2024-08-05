@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigation } from '../Navigation/Navigation';
 import { useTheme } from 'next-themes';
 import HamburgerIcon from '../../Icons/HamburgerIcon';
@@ -8,9 +8,14 @@ import { THEMES } from '@/app/_shared/config';
 
 const MobileNavigation = () => {
   const { theme } = useTheme();
-  const isLight = theme === THEMES.light;
+  const [isLight, setIsLight] = useState<boolean>(false);
   const iconColor = isLight ? 'black' : 'white';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const isLight = theme === THEMES.light;
+    setIsLight(isLight);
+  }, [theme]);
 
   return (
     <>

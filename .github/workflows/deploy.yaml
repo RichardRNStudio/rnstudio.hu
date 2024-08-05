@@ -25,28 +25,28 @@ jobs:
         run: npm run build
 
       - name: Upload files via FTP
-        uses: sebastianpopp/ftp-action@v1
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: .next  # The directory to upload
-          remote-dir: /path/to/remote/dir  # The target directory on your FTP server
+          remote-dir: /  # The target directory on your FTP server
 
       - name: Upload public files via FTP
-        uses: sebastianpopp/ftp-action@v1
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: public  # The directory to upload
-          remote-dir: /path/to/remote/dir/public  # The target directory on your FTP server
+          remote-dir: /public  # The target directory on your FTP server
 
       - name: Upload static files via FTP
-        uses: sebastianpopp/ftp-action@v1
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out  # The directory to upload
-          remote-dir: /path/to/remote/dir/out  # The target directory on your FTP server
+          remote-dir: /out  # The target directory on your FTP server

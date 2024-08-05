@@ -33,8 +33,8 @@ jobs:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: .next  # The directory to upload
-          remote-dir: /  # The target directory on your FTP server
+          localDir: .next  # The directory to upload
+          remoteDir: /  # The target directory on your FTP server
 
       - name: Upload public files via FTP
         uses: sebastianpopp/ftp-action@releases/v2
@@ -42,8 +42,8 @@ jobs:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: public  # The directory to upload
-          remote-dir: /public  # The target directory on your FTP server
+          localDir: public  # The directory to upload
+          remoteDir: /public  # The target directory on your FTP server
 
       - name: Upload static files via FTP
         uses: sebastianpopp/ftp-action@releases/v2
@@ -51,5 +51,5 @@ jobs:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: out  # The directory to upload
-          remote-dir: /out  # The target directory on your FTP server
+          localDir: out  # The directory to upload
+          remoteDir: /out  # The target directory on your FTP server

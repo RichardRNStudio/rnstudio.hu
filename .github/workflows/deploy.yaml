@@ -5,6 +5,10 @@ on:
     branches:
       - main  # or the branch you want to deploy from
 
+#on:
+  #release:
+    #types: [created]
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

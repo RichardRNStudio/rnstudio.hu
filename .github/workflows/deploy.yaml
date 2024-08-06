@@ -35,6 +35,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: .next  # The directory to upload
           remoteDir: /  # The target directory on your FTP server
+        env:
+          ACTIONS_RUNNER_DEBUG: true
 
       - name: Upload public files via FTP
         uses: sebastianpopp/ftp-action@releases/v2

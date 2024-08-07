@@ -36,8 +36,17 @@ export const JOBS: Job[] = [
       },
     },
     position: 'Senior Software Engineer',
-    startDate: new Date('2019-07-22'),
+    startDate: new Date('2021-07-01'),
     endDate: new Date(),
+  },
+  {
+    company: {
+      name: 'One Beyond',
+      link: 'https://one-beyond.com',
+    },
+    position: 'Medior Software Engineer',
+    startDate: new Date('2019-07-22'),
+    endDate: new Date('2021-07-01'),
   },
   {
     company: {

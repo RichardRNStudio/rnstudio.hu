@@ -8,7 +8,7 @@ import { NavigationLink } from './types';
 
 export const WEBSITE = 'https://rnstudio.hu';
 export const EMAIL = 'riiichj@gmail.com';
-export const IS_OPEN_TO_WORK = true;
+export const IS_OPEN_TO_WORK = false;
 
 export const LINKED_IN_SOCIAL_URL =
   'https://www.linkedin.com/in/richard-nagy-rnstudio';
@@ -48,7 +48,7 @@ export const JOBS: Job[] = [
         alt: 'PC Trade Systems logo',
       },
     },
-    position: 'Junior Software Engineer',
+    position: 'Medior Software Engineer',
     startDate: new Date('2017-02-01'),
     endDate: new Date('2019-07-19'),
   },
@@ -57,7 +57,7 @@ export const JOBS: Job[] = [
       name: 'PC Trade Systems',
       link: 'https://pctrade.hu',
     },
-    position: 'Intern',
+    position: 'Junior Software Engineer',
     startDate: new Date('2015-05-01'),
     endDate: new Date('2017-01-31'),
   },

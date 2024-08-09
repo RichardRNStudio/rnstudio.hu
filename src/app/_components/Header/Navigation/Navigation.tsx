@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export const Navigation = () => {
+export const Navigation = ({ onMenuClose }: { onMenuClose?: () => void }) => {
   const pathname = usePathname();
 
   return LINKS.filter(({ isHidden }) => !isHidden).map(
@@ -13,6 +13,7 @@ export const Navigation = () => {
       <Link
         key={index}
         href={href}
+        onClick={onMenuClose}
         className={classNames(
           pathname === href
             ? 'text-black dark:text-white'

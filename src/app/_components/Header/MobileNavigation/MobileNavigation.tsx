@@ -34,7 +34,7 @@ const MobileNavigation = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           />
           <div className="flex flex-col items-center gap-5">
-            <Navigation />
+            <Navigation onMenuClose={() => setIsMobileMenuOpen(false)} />
           </div>
         </div>
       )}

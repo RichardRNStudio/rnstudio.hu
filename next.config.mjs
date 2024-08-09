@@ -4,8 +4,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     domains: ['img.shields.io'],
   },
-  output: 'export',
-  distDir: 'dist',
 };
 
 export default nextConfig;

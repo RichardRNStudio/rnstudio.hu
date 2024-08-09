@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://rnstudio.hu/</loc>
+<lastmod>2024-08-07T18:19:07.622Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://rnstudio.hu/projects/pccontroller</loc>
+<lastmod>2024-08-07T18:19:07.622Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://rnstudio.hu/photos</loc>
+<lastmod>2024-08-07T18:19:07.622Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+</urlset>

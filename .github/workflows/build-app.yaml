@@ -50,7 +50,7 @@ jobs:
       - name: Set up Git
         run: |
           git config --global user.name "RichardRNStudio"
-          git config --global user.email "info@rnstudio.hu"
+          git config --global user.email "riiichj@gmail.com"
 
       - name: Update version
         run: |

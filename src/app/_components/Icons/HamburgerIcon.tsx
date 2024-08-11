@@ -1,10 +1,6 @@
 import { IconProps } from './Icon.interface';
 
-export const HamburgerIcon = ({
-  width,
-  height,
-  color,
-}: IconProps) => (
+export const HamburgerIcon = ({ width, height, color }: IconProps) => (
   <svg
     width={width}
     height={height}

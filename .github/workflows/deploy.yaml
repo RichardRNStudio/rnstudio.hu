@@ -3,11 +3,11 @@ name: Deploy rnstudio.hu
 on:
   push:
     branches:
-      - main  # or the branch you want to deploy from
+      - main # or the branch you want to deploy from
 
 #on:
-  #release:
-    #types: [created]
+#release:
+#types: [created]
 
 jobs:
   build-and-deploy:
@@ -37,8 +37,8 @@ jobs:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: .next  # The directory to upload
-          remoteDir: /  # The target directory on your FTP server
+          localDir: .next # The directory to upload
+          remoteDir: / # The target directory on your FTP server
         env:
           ACTIONS_RUNNER_DEBUG: true
 
@@ -48,8 +48,8 @@ jobs:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: public  # The directory to upload
-          remoteDir: /public  # The target directory on your FTP server
+          localDir: public # The directory to upload
+          remoteDir: /public # The target directory on your FTP server
 
       - name: Upload static files via FTP
         uses: sebastianpopp/ftp-action@releases/v2
@@ -57,5 +57,5 @@ jobs:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: out  # The directory to upload
-          remoteDir: /out  # The target directory on your FTP server
+          localDir: out # The directory to upload
+          remoteDir: /out # The target directory on your FTP server

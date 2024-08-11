@@ -32,14 +32,18 @@ const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'Gmail',
     link: `mailto:${EMAIL}`,
-    Logo: ({ width, height }) => <GmailIcon width={width} height={height} color="currentColor" />,
+    Logo: ({ width, height }) => (
+      <GmailIcon width={width} height={height} color="currentColor" />
+    ),
     showInFooter: false,
   },
 ];
 
 const SocialLinks = ({ className, isFooter }: SocialLinksProps) => {
   const iconSize = isFooter ? 18 : 15;
-  return SOCIAL_LINKS.filter(({showInFooter}) => isFooter ? showInFooter : true).map(({ name, Logo, link }, index) => (
+  return SOCIAL_LINKS.filter(({ showInFooter }) =>
+    isFooter ? showInFooter : true
+  ).map(({ name, Logo, link }, index) => (
     <a
       key={index}
       href={link}

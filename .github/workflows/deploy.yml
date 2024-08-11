@@ -3,7 +3,8 @@ name: Deploy to VPS Server
 on:
   push:
     branches:
-      - main  # Change to your deployment branch if needed
+      - main 
+  workflow_dispatch:
 
 jobs:
   deploy:

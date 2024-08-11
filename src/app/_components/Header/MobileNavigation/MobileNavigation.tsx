@@ -1,27 +1,17 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { Navigation } from '../Navigation/Navigation';
-import { useTheme } from 'next-themes';
-import HamburgerIcon from '../../Icons/HamburgerIcon';
+import { useState } from 'react';
 import CloseIcon from '../../Icons/CloseIcon';
-import { THEMES } from '@/app/_shared/config';
+import HamburgerIcon from '../../Icons/HamburgerIcon';
+import { Navigation } from '../Navigation/Navigation';
 
 const MobileNavigation = () => {
-  const { theme } = useTheme();
-  const [isLight, setIsLight] = useState<boolean>(false);
-  const iconColor = isLight ? 'black' : 'white';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-
-  useEffect(() => {
-    const isLight = theme === THEMES.light;
-    setIsLight(isLight);
-  }, [theme]);
 
   return (
     <>
       <div className="sm:hidden flex items-center order-last">
         <button onClick={() => setIsMobileMenuOpen(true)}>
-          <HamburgerIcon width="30px" height="30px" color={iconColor} />
+          <HamburgerIcon width="30px" height="30px" color="currentColor" />
         </button>
       </div>
       {isMobileMenuOpen && (
@@ -29,7 +19,7 @@ const MobileNavigation = () => {
           <CloseIcon
             width="40px"
             height="40px"
-            color={iconColor}
+            color="currentColor"
             className="absolute top-6 right-6 cursor-pointer"
             onClick={() => setIsMobileMenuOpen(false)}
           />

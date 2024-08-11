@@ -32,7 +32,7 @@ jobs:
           ssh -i ~/.ssh/id_rsa "$SSH_USER"@"$SSH_VPS_IP" "
             cd rnstudio.hu &&
             git pull origin main &&
-            yarn install --production &&
+            yarn install &&
             yarn build &&
             pm2 restart nextjs-app
           "

@@ -13,7 +13,7 @@ const getDate = () =>
   });
 
 const Time = () => {
-  const [time, setTime] = useState<string>(getDate());
+  const [time, setTime] = useState<string>();
 
   useEffect(() => {
     const interval = setInterval(() => {

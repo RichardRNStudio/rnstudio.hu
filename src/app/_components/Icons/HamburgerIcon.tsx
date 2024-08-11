@@ -3,7 +3,7 @@ import { IconProps } from './Icon.interface';
 export const HamburgerIcon = ({
   width,
   height,
-  color = 'black',
+  color,
 }: IconProps) => (
   <svg
     width={width}

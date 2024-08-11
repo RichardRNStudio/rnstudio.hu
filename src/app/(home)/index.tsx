@@ -6,6 +6,7 @@ import {
   X_SOCIAL_URL,
 } from '../_shared/config';
 import AboutMe from './_components/About/About';
+import Contact from './_components/Contact/Contact';
 import Profile from './_components/Profile/Profile';
 import Projects from './_components/Projects/Projects';
 import Work from './_components/Work/Work';
@@ -24,6 +25,7 @@ const Home = () => (
       <Profile />
       <AboutMe />
       <Work />
+      <Contact />
       <Projects />
     </Container>
   </>

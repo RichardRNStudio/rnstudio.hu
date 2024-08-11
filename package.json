@@ -1,7 +1,18 @@
 {
-  "name": "rnstudio",
-  "version": "0.1.0",
-  "private": true,
+  "name": "rnstudio.hu",
+  "version": "1.0.0",
+  "engines": {
+    "node": "20"
+  },
+  "description": "Richárd Nagy portfolio website using Next.js 14 features",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RichardRNStudio/rnstudio.hu"
+  },
+  "author": "Richárd Nagy",
+  "license": "MIT",
+  "bugs": "https://github.com/RichardRNStudio/rnstudio.hu/issues",
+  "homepage": "https://github.com/RichardRNStudio/rnstudio.hu#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,6 +35,7 @@
     "@types/tailwindcss": "^3.1.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",

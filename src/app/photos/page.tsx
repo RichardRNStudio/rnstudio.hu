@@ -18,37 +18,32 @@ export const metadata: Metadata = {
 const IMAGES: Photo[] = [
   {
     link: '/madrid_3.jpg',
-    label: "Madrid YEAR' 🇪🇦",
+    label: "Madrid trip YEAR' 🇪🇦",
     year: 2022,
   },
   {
     link: '/madrid_4.jpg',
-    label: "Madrid YEAR' 🇪🇦",
+    label: "Madrid trip YEAR' 🇪🇦",
     year: 2022,
   },
   {
     link: '/madrid_1.jpg',
-    label: "Madrid YEAR' 🇪🇦",
+    label: "Madrid trip YEAR' 🇪🇦",
     year: 2022,
   },
   {
     link: '/madrid_2.jpg',
-    label: "Madrid YEAR' 🇪🇦",
+    label: "Madrid trip YEAR' 🇪🇦",
     year: 2022,
   },
   {
     link: '/ub_1.jpg',
-    label: "UltraBalaton YEAR' 🇭🇺",
+    label: "UltraBalaton running YEAR' 🇭🇺",
     year: 2019,
   },
   {
     link: '/ub_2.jpg',
-    label: "UltraBalaton YEAR' 🇭🇺",
-    year: 2018,
-  },
-  {
-    link: '/utt.jpg',
-    label: "UTT YEAR' 🇭🇺",
+    label: "UltraBalaton running YEAR' 🇭🇺",
     year: 2018,
   },
 ];
@@ -67,11 +62,12 @@ const PhotosPage = () => {
             <div
               key={index}
               title={title}
-              className="flex flex-col items-center gap-2 p-2 dark:bg-white rounded-lg shadow-xl transition-transform hover:rotate-1"
+              className="flex flex-col items-center gap-2 pb-2 dark:bg-white rounded-xl shadow-xl transition-transform hover:rotate-1"
             >
               <Image
                 src={link}
                 alt={title}
+                className="rounded-t-xl"
                 width={400}
                 height={400}
                 loading={index < 4 ? 'eager' : 'lazy'}

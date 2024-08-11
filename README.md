@@ -5,6 +5,10 @@
 [![Typescript](https://img.shields.io/badge/-Typescript-3178C6?style=flat&logo=typescript&logoColor=FFF)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=FFF)](https://tailwindcss.com/)
 
+
+[![build](https://github.com/RichardRNStudio/rnstudio.hu/actions/workflows/build-app.yml/badge.svg?branch=main)](https://github.com/RichardRNStudio/rnstudio.hu/actions/workflows/build-app.yml)
+[![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/RichardRNStudio/rnstudio.hu/blob/main/LICENSE)
+
 <p>
 My personal website and portfolio is crafted with Next.js, React, TypeScript, and Tailwind CSS. It showcases my projects and details my journey in software development.
 </p>

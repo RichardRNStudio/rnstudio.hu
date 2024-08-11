@@ -16,19 +16,19 @@ jobs:
       - name: Set up SSH key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
-          SSH_ACCESS: ${{ secrets.SSH_ACCESS }}
+          SSH_VPS_IP: ${{ secrets.SSH_VPS_IP }}
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H "$SSH_ACCESS" >> ~/.ssh/known_hosts
+          ssh-keyscan -H "$SSH_VPS_IP" >> ~/.ssh/known_hosts
 
       - name: Deploy via SSH
         env:
-          SSH_ACCESS: ${{ secrets.SSH_ACCESS }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_VPS_IP: ${{ secrets.SSH_VPS_IP }}
         run: |
-          ssh -i ~/.ssh/id_rsa "$SSH_ACCESS" "
+          ssh -i ~/.ssh/id_rsa "$SSH_USER"@"$SSH_VPS_IP" "
             cd rnstudio.hu &&
             git pull origin main &&
             yarn install --production &&

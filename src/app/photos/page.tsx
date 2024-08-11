@@ -4,6 +4,7 @@ import { Edu_VIC_WA_NT_Beginner } from 'next/font/google';
 import classNames from 'classnames';
 import { Metadata } from 'next';
 import Container from '../_components/Container/Container';
+import Emoji from '../_components/Emoji/Emoji';
 
 export const metadata: Metadata = {
   title: 'Photos',
@@ -18,33 +19,45 @@ export const metadata: Metadata = {
 const IMAGES: Photo[] = [
   {
     link: '/madrid_3.jpg',
-    label: "Madrid trip YEAR' 🇪🇦",
+    label: "Madrid trip YEAR'",
     year: 2022,
+    emoji: '🇪🇦',
+    emojiLabel: 'spanish-flag',
   },
   {
     link: '/madrid_4.jpg',
-    label: "Madrid trip YEAR' 🇪🇦",
+    label: "Madrid trip YEAR'",
     year: 2022,
+    emoji: '🇪🇦',
+    emojiLabel: 'spanish-flag',
   },
   {
     link: '/madrid_1.jpg',
-    label: "Madrid trip YEAR' 🇪🇦",
+    label: "Madrid trip YEAR'",
     year: 2022,
+    emoji: '🇪🇦',
+    emojiLabel: 'spanish-flag',
   },
   {
     link: '/madrid_2.jpg',
-    label: "Madrid trip YEAR' 🇪🇦",
+    label: "Madrid trip YEAR'",
     year: 2022,
+    emoji: '🇪🇦',
+    emojiLabel: 'spanish-flag',
   },
   {
     link: '/ub_1.jpg',
-    label: "UltraBalaton running YEAR' 🇭🇺",
+    label: "UltraBalaton running YEAR'",
     year: 2019,
+    emoji: '🇭🇺',
+    emojiLabel: 'hungarian-flag',
   },
   {
     link: '/ub_2.jpg',
-    label: "UltraBalaton running YEAR' 🇭🇺",
+    label: "UltraBalaton running YEAR'",
     year: 2018,
+    emoji: '🇭🇺',
+    emojiLabel: 'hungarian-flag',
   },
 ];
 
@@ -56,7 +69,7 @@ const PhotosPage = () => {
   return (
     <Container className="md:w-10/12 xl:w-9/12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center">
-        {sortedImagesByYear.map(({ link, label, year }, index) => {
+        {sortedImagesByYear.map(({ link, label, year, emoji, emojiLabel }, index) => {
           const title = label.replace('YEAR', `${year % 100}`);
           return (
             <div
@@ -80,7 +93,7 @@ const PhotosPage = () => {
                   index % 2 === 0 ? 'rotate-1' : '-rotate-1'
                 )}
               >
-                {title}
+                {title} {emoji && emojiLabel && <Emoji label={emojiLabel}>{emoji}</Emoji>}
               </span>
             </div>
           );

@@ -2,7 +2,7 @@
   "name": "rnstudio.hu",
   "version": "1.0.0",
   "engines": {
-    "node": "20"
+    "node": "18"
   },
   "description": "Richárd Nagy portfolio website using Next.js 14 features",
   "repository": {

@@ -1,0 +1,32 @@
+name: Deploy to VPS Server
+
+on:
+  push:
+    branches:
+      - main  # Change to your deployment branch if needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy via SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+
+          ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_ACCESS }} "
+            cd rnstudio.hu &&
+            git pull origin main &&
+            yarn install --production &&
+            yarn build &&
+            pm2 restart nextjs-app
+          "

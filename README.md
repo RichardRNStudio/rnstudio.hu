@@ -16,7 +16,30 @@ My personal website and portfolio is crafted with Next.js, React, TypeScript, an
 ## Getting Started
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
+or
+
+```bash
+npm run dev
+```
+
+
+## Features
+
+1. App Router Implementation:
+- Adopted the latest Next.js App Router for optimized routing.
+- Enhanced page loading speeds and improved user experience with the new routing system.
+
+2. GitHub Cards Integration:
+- Displayed the latest projects using Next.js's new streaming feature.
+- Dynamically pulled and showcased GitHub repositories with real-time updates.
+
+3. Continuous Integration & Continuous Deployment (CI/CD):
+- Implemented CI/CD pipelines for streamlined development.
+- Automated testing, building, and deployment processes to ensure consistent and reliable updates.
+
+4. VPS Deployment:
+- Deployed the portfolio to a VPS server, allowing full utilization of Next.js features.
+- Improved performance and control over the hosting environment, ensuring robust and scalable deployment.
+

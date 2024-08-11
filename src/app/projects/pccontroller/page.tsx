@@ -5,6 +5,7 @@ import {
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Template from '../_components/Template/Template';
+import GooglePlayIcon from '@/app/_components/Icons/GooglePlayIcon';
 
 export const metadata: Metadata = {
   title: PC_CONTROLLER_PROJECT.name,
@@ -72,19 +73,18 @@ const PCControllerPage = () => (
       control media playback, or change light settings, this app has you
       covered.
     </p>
-    <a
-      href={PC_CONTROLLER_PROJECT.link ?? '#'}
-      rel="noopener noreferrer"
-      target="_blank"
-      title={PC_CONTROLLER_PROJECT.name}
-    >
-      <Image
-        src="https://img.shields.io/badge/-Available_on_Google_Play-414141?style=flat&logo=google-play&logoColor=FFF"
-        width={250}
-        height={75}
-        alt="Available on Google Play"
-      />
-    </a>
+    <div className="flex justify-start">
+      <a
+        href={PC_CONTROLLER_PROJECT.googlePlayLink ?? '#'}
+        title={PC_CONTROLLER_PROJECT.name}
+        className="flex flex-row items-center rounded-lg bg-green-700 hover:bg-green-600 gap-2 p-3"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <GooglePlayIcon width={20} height={20} />
+        <span>Available on Google Play</span>
+      </a>
+    </div>
   </Template>
 );
 

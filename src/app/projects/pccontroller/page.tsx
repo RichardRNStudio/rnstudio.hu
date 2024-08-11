@@ -3,7 +3,6 @@ import {
   PC_CONTROLLER_PROJECT,
 } from '@/app/_shared/config';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Template from '../_components/Template/Template';
 import GooglePlayIcon from '@/app/_components/Icons/GooglePlayIcon';
 

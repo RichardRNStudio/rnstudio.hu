@@ -15,8 +15,4 @@ My personal website and portfolio is crafted with Next.js, React, TypeScript, an
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```

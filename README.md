@@ -1,4 +1,4 @@
-<h1>:computer: <a href="https://rnstudio.hu">rnstudio.hu</a></h1>
+<h1>:computer: <a href="https://rnstudio.hu" target="_blank">rnstudio.hu</a></h1>
 
 [![Next.js](https://img.shields.io/badge/-Next.js-000?style=flat&logo=next.js&logoColor=FFF)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=FFF)](https://reactjs.org/)

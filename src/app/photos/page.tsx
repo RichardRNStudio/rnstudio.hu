@@ -69,35 +69,40 @@ const PhotosPage = () => {
   return (
     <Container className="md:w-10/12 xl:w-9/12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center">
-        {sortedImagesByYear.map(({ link, label, year, emoji, emojiLabel }, index) => {
-          const title = label.replace('YEAR', `${year % 100}`);
-          return (
-            <div
-              key={index}
-              title={title}
-              className="flex flex-col items-center gap-2 pb-2 dark:bg-white rounded-xl shadow-xl transition-transform hover:rotate-1"
-            >
-              <Image
-                src={link}
-                alt={title}
-                className="rounded-t-xl"
-                width={400}
-                height={400}
-                loading={index < 4 ? 'eager' : 'lazy'}
-                sizes="(max-width: 640px) 50vw, (max-width: 768px) 40vw, (max-width: 1536px) 33vw, 25vw"
-              />
-              <span
-                className={classNames(
-                  font.className,
-                  'text-black text-xl font-black tracking-wide',
-                  index % 2 === 0 ? 'rotate-1' : '-rotate-1'
-                )}
+        {sortedImagesByYear.map(
+          ({ link, label, year, emoji, emojiLabel }, index) => {
+            const title = label.replace('YEAR', `${year % 100}`);
+            return (
+              <div
+                key={index}
+                title={title}
+                className="flex flex-col items-center gap-2 pb-2 dark:bg-white rounded-xl shadow-xl transition-transform hover:rotate-1"
               >
-                {title} {emoji && emojiLabel && <Emoji label={emojiLabel}>{emoji}</Emoji>}
-              </span>
-            </div>
-          );
-        })}
+                <Image
+                  src={link}
+                  alt={title}
+                  className="rounded-t-xl"
+                  width={400}
+                  height={400}
+                  loading={index < 4 ? 'eager' : 'lazy'}
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 40vw, (max-width: 1536px) 33vw, 25vw"
+                />
+                <span
+                  className={classNames(
+                    font.className,
+                    'text-black text-xl font-black tracking-wide',
+                    index % 2 === 0 ? 'rotate-1' : '-rotate-1'
+                  )}
+                >
+                  {title}{' '}
+                  {emoji && emojiLabel && (
+                    <Emoji label={emojiLabel}>{emoji}</Emoji>
+                  )}
+                </span>
+              </div>
+            );
+          }
+        )}
       </div>
     </Container>
   );

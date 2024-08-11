@@ -1,4 +1,4 @@
-import { EmojiProps } from "../_components/Emoji/Emoji.types";
+import { EmojiProps } from '../_components/Emoji/Emoji.types';
 
 export type Photo = {
   link: string;
@@ -6,4 +6,4 @@ export type Photo = {
   year: number;
   emoji?: EmojiProps['children'];
   emojiLabel?: EmojiProps['label'];
-}
+};

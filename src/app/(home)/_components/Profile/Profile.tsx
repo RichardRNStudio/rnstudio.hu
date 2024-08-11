@@ -12,11 +12,13 @@ const Profile = () => (
           <div className="text-sm text-stone-600 dark:text-stone-200 text-opacity-70 md:text-md">
             Szeged, Hungary
           </div>
-          <Emoji label='hungarian-flag'>🇭🇺</Emoji>
+          <Emoji label="hungarian-flag">🇭🇺</Emoji>
         </div>
         <h1 className="text-2xl font-black mt-2 md:text-3xl">
           {`Hi, I'm Richárd Nagy`}
-          <Emoji label='wave' className='ml-1'>👋</Emoji>
+          <Emoji label="wave" className="ml-1">
+            👋
+          </Emoji>
         </h1>
         <h2 className="italic md:text-xl md:mt-2">
           Senior Javascript Engineer

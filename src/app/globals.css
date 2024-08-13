@@ -31,9 +31,3 @@ body {
     text-wrap: balance;
   }
 }
-
-@supports (-webkit-touch-callout: none) {
-  body {
-    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'sans-serif';
-  }
-}

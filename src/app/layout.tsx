@@ -8,7 +8,6 @@ import Header from './_components/Header/Header';
 import OpenToWork from './_components/OpenToWork/OpenToWork';
 import { IS_OPEN_TO_WORK, WEBSITE, X_SOCIAL_ID } from './_shared/config';
 import './globals.css';
-import Head from 'next/head';
 
 const quickSand = Quicksand({ subsets: ['latin'] });
 
@@ -39,12 +38,6 @@ const Layout = ({
   children: React.ReactNode;
 }>) => (
   <html lang="en" suppressHydrationWarning>
-    <Head>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=optional"
-        rel="stylesheet"
-      />
-    </Head>
     <body
       className={classNames(
         quickSand.className,

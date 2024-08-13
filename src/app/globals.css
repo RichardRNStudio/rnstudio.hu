@@ -32,8 +32,8 @@ body {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji');
-
-html {
-  font-family: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+@supports (-webkit-touch-callout: none) {
+  body {
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'sans-serif';
+  }
 }

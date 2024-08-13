@@ -12,10 +12,10 @@ const config: Config = {
     extend: {
       fontFamily: {
         emoji: [
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji',
+          'Apple Color Emoji', // Safari (macOS/iOS)
+          'Segoe UI Emoji', // Windows
+          'Noto Color Emoji', // Other platforms (Linux, Android, etc.)
+          'sans-serif', // Fallback to default sans-serif
         ],
       },
       minWidth: {

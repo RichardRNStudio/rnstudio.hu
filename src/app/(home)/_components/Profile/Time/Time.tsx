@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from 'react';
 
 const getDate = () =>
-  new Date().toLocaleDateString('en-US', {
+  new Date().toLocaleDateString('en-ES', {
+    timeZone: 'Europe/Budapest',
     year: 'numeric',
     month: 'numeric',
     day: 'numeric',
@@ -13,7 +14,7 @@ const getDate = () =>
   });
 
 const Time = () => {
-  const [time, setTime] = useState<string>();
+  const [time, setTime] = useState<string>(getDate());
 
   useEffect(() => {
     const interval = setInterval(() => {

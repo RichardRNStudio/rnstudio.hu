@@ -1,12 +1,9 @@
-import { Noto_Color_Emoji } from 'next/font/google';
-import { EmojiProps } from './Emoji.types';
 import classNames from 'classnames';
-
-const notoColorEmoji = Noto_Color_Emoji({ subsets: ['emoji'], weight: '400' });
+import { EmojiProps } from './Emoji.types';
 
 const Emoji = ({ label, children, className }: EmojiProps) => (
   <span
-    className={classNames(notoColorEmoji.className, className)}
+    className={classNames('font-emoji', className)}
     role="img"
     aria-label={label}
   >

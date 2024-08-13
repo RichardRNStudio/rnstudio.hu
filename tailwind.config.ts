@@ -10,6 +10,17 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        emoji: [
+          'Noto Color Emoji',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Android Emoji',
+          'Emoji',
+          'sans-serif',
+        ],
+      },
       minWidth: {
         36.5: '9.125rem',
         70: '17.5rem',

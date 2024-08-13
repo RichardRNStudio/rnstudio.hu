@@ -12,13 +12,10 @@ const config: Config = {
     extend: {
       fontFamily: {
         emoji: [
-          'Noto Color Emoji',
           'Apple Color Emoji',
           'Segoe UI Emoji',
           'Segoe UI Symbol',
-          'Android Emoji',
-          'Emoji',
-          'sans-serif',
+          'Noto Color Emoji',
         ],
       },
       minWidth: {

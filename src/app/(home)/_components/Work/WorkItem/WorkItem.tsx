@@ -17,9 +17,9 @@ const WorkItem = ({
       rel="noopener noreferrer"
       title={`${companyName} - ${position}`}
     >
-      <div className="w-full flex flex-row justify-between cursor-pointer hover:text-neutral-300 dark:hover:text-neutral-400 text-black dark:text-white">
-        <div className="flex flex-row gap-4 w-8/12">
-          <div className="w-14 min-w-14">
+      <div className="w-full flex flex-row justify-between cursor-pointer hover:text-neutral-400 dark:hover:text-neutral-400 text-black dark:text-white">
+        <div className="flex flex-row gap-4 w-8/12 items-center">
+          <div className="w-16 min-w-16">
             {!!logo?.src && (
               <CompanyLogo src={logo.src} alt={logo?.alt ?? 'Company Logo'} />
             )}
@@ -29,7 +29,7 @@ const WorkItem = ({
             <div className="text-gray-40">{position}</div>
           </div>
         </div>
-        <div className="flex justify-end w-4/12">
+        <div className="flex justify-end w-4/12 items-center">
           <span>
             {startDateYear} – {isEndDateNow ? <em>Now</em> : endDateYear}
           </span>

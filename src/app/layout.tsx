@@ -41,10 +41,10 @@ const Layout = ({
     <body
       className={classNames(
         quickSand.className,
-        'bg-none bg-stone-100 dark:bg-zinc-900 min-h-screen flex flex-col'
+        'bg-none bg-neutral-100 dark:bg-zinc-900 min-h-screen flex flex-col'
       )}
     >
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" defaultTheme="dark">
         <Header />
         {IS_OPEN_TO_WORK && <OpenToWork />}
         <main

@@ -81,7 +81,7 @@ const PCControllerPage = () => (
         target="_blank"
       >
         <GooglePlayIcon width={20} height={20} />
-        <span>Available on Google Play</span>
+        <span className="text-white">Available on Google Play</span>
       </a>
     </div>
   </Template>

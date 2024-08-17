@@ -19,7 +19,7 @@ const Profile = () => (
         <h1 className="sm:hidden text-2xl font-black text-center mt-2">
           Richárd Nagy
         </h1>
-        <h1 className="hidden font-black mt-2 md:text-3xl sm:block">
+        <h1 className="hidden font-black mt-2 sm:text-3xl sm:block">
           {`Hi, I'm Richárd Nagy`}
           <Emoji label="wave" className="ml-1">
             👋

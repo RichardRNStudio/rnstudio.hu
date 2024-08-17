@@ -7,7 +7,7 @@ import { ProjectItemProps } from './ProjectItem.types';
 const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
   const wrapperClassName = classNames(
     isLoadingSkeleton && 'animate-pulse',
-    'p-4 border border-neutral-500 border-opacity-30 rounded-xl hover:bg-zinc-200 dark:hover:bg-zinc-800 cursor-pointer min-h-40 flex flex-col justify-between'
+    'p-4 border border-neutral-500 border-opacity-30 rounded-xl hover:bg-zinc-300 dark:hover:bg-zinc-800 cursor-pointer min-h-40 flex flex-col justify-between'
   );
 
   const Skeleton = () => (

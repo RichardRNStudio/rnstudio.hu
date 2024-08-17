@@ -5,8 +5,8 @@ const CompanyLogo = ({ src, alt }: CompanyLogoProps) => (
   <Image
     src={src}
     alt={alt}
-    width={50}
-    height={50}
+    width={60}
+    height={60}
     className="rounded-md border-2 border-gray-500 dark:border-black"
   />
 );

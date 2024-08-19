@@ -14,6 +14,9 @@ const config: Config = {
         36.5: '9.125rem',
         70: '17.5rem',
       },
+      minHeight: {
+        18: '4.5rem',
+      },
       keyframes: {
         'switch-dark-move': {
           '0%': { transform: 'translateX(0)' },

@@ -14,7 +14,13 @@ const Template = ({
     <div className="flex flex-col mx-2 sm:mx-6 text-black dark:text-white">
       {image && (
         <div className="flex flex-col justify-center items-center">
-          <Image src={image} alt={title} width={1200} height={500} />
+          <Image
+            src={image}
+            alt={title}
+            width={1200}
+            height={500}
+            loading="eager"
+          />
         </div>
       )}
       <div className="flex flex-col mt-6">

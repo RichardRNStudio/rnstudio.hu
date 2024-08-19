@@ -9,7 +9,9 @@ const Header = () => (
     <Container className="w-full">
       <nav className="flex justify-between text-black dark:text-white">
         <div className="flex items-center">
-          <Link href="/">RNStudio</Link>
+          <Link href="/" className="hover:text-gray-300">
+            RNStudio
+          </Link>
         </div>
         <div className="flex flex-row items-center gap-4">
           <DesktopNavigation />

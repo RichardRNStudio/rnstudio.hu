@@ -20,7 +20,7 @@ const MobileNavigation = () => {
       <div
         className={classNames(
           'fixed top-0 right-0 bottom-0 min-h-screen h-full w-full z-20 transition-transform duration-300 bg-slate-200 dark:bg-zinc-900 flex items-center justify-center',
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          isMobileMenuOpen ? 'translate-x-0 visible' : 'translate-x-full hidden'
         )}
       >
         <CloseIcon

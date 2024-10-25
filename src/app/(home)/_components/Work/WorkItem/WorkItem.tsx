@@ -9,7 +9,10 @@ const WorkItem = ({
 }: Job) => {
   const startDateYear = startDate.getFullYear();
   const endDateYear = endDate.getFullYear();
-  const isEndDateNow = endDateYear === new Date().getFullYear();
+  const endDateMonth = endDate.getMonth();
+  const isEndDateNow =
+    endDateYear === new Date().getFullYear() &&
+    endDateMonth === new Date().getMonth();
   return (
     <a
       href={link}

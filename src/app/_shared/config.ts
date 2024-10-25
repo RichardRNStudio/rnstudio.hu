@@ -28,6 +28,19 @@ export const THEMES = {
 export const JOBS: Job[] = [
   {
     company: {
+      name: `Butlin's`,
+      link: 'https://butlins.com',
+      logo: {
+        src: '/butlins_logo.jpeg',
+        alt: `Butlin's logo`,
+      },
+    },
+    position: 'Senior Software Engineer',
+    startDate: new Date('2024-10-01'),
+    endDate: new Date(),
+  },
+  {
+    company: {
       name: 'One Beyond',
       link: 'https://one-beyond.com',
       logo: {
@@ -37,7 +50,7 @@ export const JOBS: Job[] = [
     },
     position: 'Senior Software Engineer',
     startDate: new Date('2021-07-01'),
-    endDate: new Date(),
+    endDate: new Date('2024-09-27'),
   },
   {
     company: {

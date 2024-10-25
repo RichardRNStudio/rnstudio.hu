@@ -12,13 +12,13 @@ const AboutMe = () => {
         <p className="my-2 leading-7">
           {`Currently, I'm working at`}{' '}
           <a
-            href="https://one-beyond.com"
+            href="https://butlins.com"
             rel="noopener noreferrer"
             className="underline hover:text-gray-300"
             target="_blank"
-            title="One Beyond"
+            title={`Butlin's`}
           >
-            One Beyond
+            {`Butlin's`}
           </a>
           {` as a Senior Frontend Engineer, where I'm focusing on developing a large booking system that aims
         to enhance user experience and streamline booking processes through advanced frontend technologies.`}

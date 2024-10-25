@@ -1,6 +1,6 @@
 {
   "name": "rnstudio.hu",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "engines": {
     "node": ">=18"
   },
@@ -34,10 +34,10 @@
     "@types/react-dom": "^18",
     "@types/tailwindcss": "^3.1.0",
     "@typescript-eslint/eslint-plugin": "^8.11.0",
-    "@typescript-eslint/parser": "^8.1.0",
+    "@typescript-eslint/parser": "^8.11.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5",
+    "eslint-config-next": "15.0.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "postcss": "^8",

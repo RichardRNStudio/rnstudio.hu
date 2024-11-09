@@ -9,10 +9,7 @@ const WorkItem = ({
 }: Job) => {
   const startDateYear = startDate.getFullYear();
   const endDateYear = endDate.getFullYear();
-  const endDateMonth = endDate.getMonth();
-  const isEndDateNow =
-    endDateYear === new Date().getFullYear() &&
-    endDateMonth === new Date().getMonth();
+  const isEndDateMatchingStartDate = startDateYear === endDateYear;
   return (
     <a
       href={link}
@@ -34,7 +31,8 @@ const WorkItem = ({
         </div>
         <div className="flex justify-end w-4/12 items-center">
           <span>
-            {startDateYear} – {isEndDateNow ? <em>Now</em> : endDateYear}
+            {startDateYear} –{' '}
+            {isEndDateMatchingStartDate ? <em>Now</em> : endDateYear}
           </span>
         </div>
       </div>

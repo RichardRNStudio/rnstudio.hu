@@ -1,6 +1,6 @@
 {
   "name": "rnstudio.hu",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "engines": {
     "node": ">=18"
   },

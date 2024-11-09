@@ -9,8 +9,8 @@ const Projects = () => {
     <Section title="Projects">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <Suspense
-          fallback={new Array(REPOSITORIES.length).fill(null).map(() => (
-            <ProjectItem key="loading-skeleton" isLoadingSkeleton />
+          fallback={new Array(REPOSITORIES.length).fill(null).map((_, key) => (
+            <ProjectItem key={`${key}-loading-skeleton`} isLoadingSkeleton />
           ))}
         >
           <ProjectList />

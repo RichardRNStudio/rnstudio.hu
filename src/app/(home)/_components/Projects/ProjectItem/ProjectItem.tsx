@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import ProjectItemName from '../ProjectItemName/ProjectItemName';
 import ProjectItemStars from '../ProjectItemStars/ProjectItemStars';
 import { ProjectItemProps } from './ProjectItem.types';
+import Link from 'next/link';
 
 const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
   const wrapperClassName = classNames(
@@ -60,14 +61,20 @@ const ProjectSummaryItem = ({ data, isLoadingSkeleton }: ProjectItemProps) => {
 
   return (
     <div className={wrapperClassName}>
-      <a
-        href={data.link}
-        target={data?.target}
-        rel="noopener noreferrer"
-        title={data.name}
-      >
-        <Skeleton />
-      </a>
+      {data.isInternalLink ? (
+        <Link href={data.link} target={data?.target} title={data.name}>
+          <Skeleton />
+        </Link>
+      ) : (
+        <a
+          href={data.link}
+          target={data?.target}
+          rel="noopener noreferrer"
+          title={data.name}
+        >
+          <Skeleton />
+        </a>
+      )}
     </div>
   );
 };

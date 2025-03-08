@@ -147,6 +147,7 @@ export const PC_CONTROLLER_PROJECT: Project = {
   stars: 0,
   year: 2020,
   image: '/pc_controller_mockup.png',
+  isInternalLink: true,
 };
 
 export const CUSTOM_REPOSITORIES: Project[] = [PC_CONTROLLER_PROJECT];

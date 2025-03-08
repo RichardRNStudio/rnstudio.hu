@@ -24,6 +24,7 @@ export type ProjectMain = {
 export type Project = {
   description: string;
   link: string;
+  isInternalLink?: boolean;
   stars: number;
   target?: HTMLAttributeAnchorTarget;
   year?: number;

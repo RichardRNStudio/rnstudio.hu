@@ -46,7 +46,7 @@ const ThemeSelector = () => {
         ref={ref}
         className={classNames(
           'opacity-0',
-          'w-5 h-5 bg-white z-10 absolute rounded-full ease-linear animation-fill-forwards'
+          'w-5 h-5 bg-white z-20 absolute rounded-full ease-linear animation-fill-forwards'
         )}
       />
       <SunIcon width={20} height={20} color="yellow" />

@@ -1,3 +1,5 @@
+'use client';
+
 import CompanyLogo from '../CompanyLogo/CompanyLogo';
 import { Job } from './WorkItem.types';
 
@@ -10,14 +12,24 @@ const WorkItem = ({
   const startDateYear = startDate.getFullYear();
   const endDateYear = endDate.getFullYear();
   const isEndDateMatchingStartDate = startDateYear === endDateYear;
+
+  const handleOnMouseEnter = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    const offset = event.currentTarget.offsetTop;
+    document.documentElement.style.setProperty('--bar-offset', `${offset}px`);
+  };
+
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       title={`${companyName} - ${position}`}
+      className="z-10"
+      onMouseEnter={handleOnMouseEnter}
     >
-      <div className="w-full flex flex-row justify-between cursor-pointer hover:text-neutral-400 dark:hover:text-neutral-400 text-black dark:text-white">
+      <div className="w-full flex flex-row h-18 min-h-18 justify-between cursor-pointer text-black dark:text-white">
         <div className="flex flex-row gap-4 w-8/12 items-center">
           <div className="w-16 min-w-16">
             {!!logo?.src && (

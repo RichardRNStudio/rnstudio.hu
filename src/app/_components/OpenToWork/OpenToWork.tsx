@@ -27,7 +27,7 @@ const OpenToWork = () => {
   return (
     <div
       className={classNames(
-        'sticky top-16 left-0 right-0 py-1 bg-green-900 shadow-sm z-10 min-h-8 transition-opacity ease-in duration-700',
+        'sticky top-16 left-0 right-0 py-1 bg-green-900 shadow-sm z-20 min-h-8 transition-opacity ease-in duration-700',
         isOpen ? 'opacity-100' : 'opacity-0'
       )}
     >

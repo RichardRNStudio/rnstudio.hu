@@ -1,3 +1,4 @@
+import { SocialProfileJsonLd } from 'next-seo';
 import Container from '../_components/Container/Container';
 import {
   GITHUB_SOCIAL_URL,
@@ -10,7 +11,7 @@ import Contact from './_components/Contact/Contact';
 import Profile from './_components/Profile/Profile';
 import Projects from './_components/Projects/Projects';
 import Work from './_components/Work/Work';
-import { SocialProfileJsonLd } from 'next-seo';
+import MarketingBar from './_components/MarketingBar/MarketingBar';
 
 const Home = () => (
   <>
@@ -24,6 +25,7 @@ const Home = () => (
     <Container>
       <Profile />
       <AboutMe />
+      <MarketingBar />
       <Work />
       <Contact />
       <Projects />

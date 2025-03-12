@@ -10,6 +10,10 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        quickSand: ['var(--font-quicksand)'],
+        protestStrike: ['var(--font-protestStrike)'],
+      },
       minWidth: {
         36.5: '9.125rem',
         70: '17.5rem',

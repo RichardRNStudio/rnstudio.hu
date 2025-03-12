@@ -4,6 +4,10 @@ import {
   STACK,
 } from '../(home)/_components/Projects/ProjectItem/ProjectItem.types';
 import { Job } from '../(home)/_components/Work/WorkItem/WorkItem.types';
+import {
+  MarketingBarCategory,
+  MarketingBarItemProps,
+} from '../_components/MarketingBarItem/MarketingBarItem.types';
 import { NavigationLink } from './types';
 
 export const WEBSITE = 'https://rnstudio.hu';
@@ -151,3 +155,24 @@ export const PC_CONTROLLER_PROJECT: Project = {
 };
 
 export const CUSTOM_REPOSITORIES: Project[] = [PC_CONTROLLER_PROJECT];
+
+export const MARKETING_BAR_ITEMS: MarketingBarItemProps[] = [
+  {
+    type: MarketingBarCategory.years,
+    label: 'Years of experience',
+    value: `${new Date().getFullYear() - 2015}+`,
+    isAPIRequired: false,
+  },
+  {
+    type: MarketingBarCategory.projects,
+    label: 'Public projects',
+    value: 1,
+    isAPIRequired: true,
+  },
+  {
+    type: MarketingBarCategory.givenStars,
+    label: 'Given stars',
+    value: 100,
+    isAPIRequired: true,
+  },
+];

@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { APIOptions, callAPI } from './api';
 import { transformGithubRepositories } from './mutators/github';
 
@@ -5,7 +6,7 @@ export const githubApiClient = <Response, Data>(
   options: APIOptions<Response, Data>
 ) =>
   callAPI({
-    url: `https://api.github.com/users/${process.env.G_USER}${options.url}`,
+    url: `https://api.github.com${options.url}`,
     mutator: options.mutator,
     requestOptions: {
       headers: {
@@ -15,8 +16,9 @@ export const githubApiClient = <Response, Data>(
     },
   });
 
-export const fetchRepositories = () =>
+export const fetchRepositories = cache(async () =>
   githubApiClient({
-    url: '/repos',
+    url: `/users/${process.env.G_USER}/repos`,
     mutator: transformGithubRepositories,
-  });
+  })
+);

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
-import { Quicksand } from 'next/font/google';
+import { Protest_Strike, Quicksand } from 'next/font/google';
 import React from 'react';
 import Footer from './_components/Footer/Footer';
 import Header from './_components/Header/Header';
@@ -9,7 +9,16 @@ import OpenToWork from './_components/OpenToWork/OpenToWork';
 import { IS_OPEN_TO_WORK, WEBSITE, X_SOCIAL_ID } from './_shared/config';
 import './globals.css';
 
-const quickSand = Quicksand({ subsets: ['latin'] });
+export const quickSand = Quicksand({
+  subsets: ['latin'],
+  variable: '--font-quickSand',
+});
+
+export const protestStrike = Protest_Strike({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-protestStrike',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -41,6 +50,8 @@ const Layout = ({
     <body
       className={classNames(
         quickSand.className,
+        quickSand.variable,
+        protestStrike.variable,
         'bg-none bg-neutral-200 dark:bg-zinc-900 min-h-screen flex flex-col'
       )}
     >

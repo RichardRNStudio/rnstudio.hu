@@ -160,19 +160,23 @@ export const MARKETING_BAR_ITEMS: MarketingBarItemProps[] = [
   {
     type: MarketingBarCategory.years,
     label: 'Years of experience',
-    value: `${new Date().getFullYear() - 2015}+`,
+    value: new Date().getFullYear() - 2015,
+    duration: 1000,
+    postFix: '+',
     isAPIRequired: false,
   },
   {
     type: MarketingBarCategory.projects,
     label: 'Public projects',
     value: 1,
+    duration: 1500,
     isAPIRequired: true,
   },
   {
     type: MarketingBarCategory.givenStars,
     label: 'Given stars',
     value: 100,
+    duration: 2000,
     isAPIRequired: true,
   },
 ];

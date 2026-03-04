@@ -24,8 +24,8 @@ const Home = () => (
     />
     <Container>
       <Profile />
-      <AboutMe />
       <MarketingBar />
+      <AboutMe />
       <Work />
       <Contact />
       <Projects />

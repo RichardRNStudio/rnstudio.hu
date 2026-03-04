@@ -5,7 +5,7 @@ import { ContainerProps } from './Container.types';
 const Container = ({
   children,
   className,
-  classNameWidth = 'md:w-9/12 xl:w-1/2',
+  classNameWidth = 'md:w-9/12 xl:w-8/12',
 }: ContainerProps) => (
   <div
     className={classNames(

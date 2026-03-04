@@ -1,8 +1,10 @@
 export type MarketingBarItemProps = {
   type: MarketingBarCategory;
   label: string;
-  value: string | number;
+  value: number;
+  duration: number;
   isAPIRequired: boolean;
+  postFix?: string;
 };
 
 export enum MarketingBarCategory {

@@ -10,6 +10,12 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        custom: {
+          'blue-1': '#00aed4',
+          'blue-2': '#0084f1',
+        },
+      },
       fontFamily: {
         quickSand: ['var(--font-quicksand)'],
         protestStrike: ['var(--font-protestStrike)'],
@@ -34,11 +40,26 @@ const config: Config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        rotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        orbit: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
         'switch-dark': 'switch-dark-move 0.5s ease-in-out',
         'switch-light': 'switch-light-move 0.5s ease-in-out',
         'fade-in': 'fade-in-opacity 0.5s ease-in',
+        'spin-slow': 'rotate 10s linear infinite',
+        rotate: 'rotate 10s linear infinite',
+        orbit: 'orbit var(--orbit-duration, 10s) linear infinite',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
